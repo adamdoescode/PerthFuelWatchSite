@@ -6,8 +6,17 @@
     <title>Adam's fuelwatch</title>
 </head>
 <body>
-    <h1>Fuelwatch data from a recent day?</h1>
-    <table border="1" class="dataframe">
+    <div class="containerForAllDivs">
+        <div class="bodyHeader">
+            <h1>Fuelwatch data from 19/12/2022!!!</h1>
+        </div>
+        <div class="graph">
+            <!-- insert graph here -->
+            <img class="plotOfPrices" src="images/plotNOR_SOR.png" alt="">
+            <img class="plotMap" src="images/pricesHeatMap.png" alt="">
+        </div>
+        <div class="fuelTable">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -48,7 +57,7 @@
       <td>EG Ampol Joondalup Winton Road</td>
       <td>155.9</td>
       <td>EG Ampol</td>
-      <td>-31.74449</td>
+      <td>-31.744490</td>
       <td>115.763128</td>
     </tr>
     <tr>
@@ -96,7 +105,7 @@
       <td>United Hepburn Heights</td>
       <td>156.5</td>
       <td>United</td>
-      <td>-31.81889</td>
+      <td>-31.818890</td>
       <td>115.774096</td>
     </tr>
     <tr>
@@ -105,7 +114,7 @@
       <td>156.5</td>
       <td>United</td>
       <td>-31.904837</td>
-      <td>115.80609</td>
+      <td>115.806090</td>
     </tr>
     <tr>
       <th>8</th>
@@ -113,31 +122,15 @@
       <td>156.5</td>
       <td>United</td>
       <td>-31.925836</td>
-      <td>115.88017</td>
+      <td>115.880170</td>
     </tr>
     <tr>
       <th>10</th>
       <td>Vibe Osborne Park</td>
       <td>156.5</td>
       <td>Vibe</td>
-      <td>-31.90631</td>
+      <td>-31.906310</td>
       <td>115.813744</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>Coles Express Malaga</td>
-      <td>156.9</td>
-      <td>Coles Express</td>
-      <td>-31.863512</td>
-      <td>115.879279</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>Coles Express Warwick (WA)</td>
-      <td>156.9</td>
-      <td>Coles Express</td>
-      <td>-31.844434</td>
-      <td>115.812742</td>
     </tr>
     <tr>
       <th>25</th>
@@ -152,7 +145,7 @@
       <td>Coles Express Ocean Reef</td>
       <td>156.9</td>
       <td>Coles Express</td>
-      <td>-31.76744</td>
+      <td>-31.767440</td>
       <td>115.749421</td>
     </tr>
     <tr>
@@ -164,14 +157,6 @@
       <td>115.852438</td>
     </tr>
     <tr>
-      <th>20</th>
-      <td>7-Eleven Landsdale</td>
-      <td>156.9</td>
-      <td>7-Eleven</td>
-      <td>-31.804934</td>
-      <td>115.835741</td>
-    </tr>
-    <tr>
       <th>22</th>
       <td>Coles Express Mount Lawley</td>
       <td>156.9</td>
@@ -180,20 +165,60 @@
       <td>115.859281</td>
     </tr>
     <tr>
+      <th>21</th>
+      <td>Coles Express Malaga</td>
+      <td>156.9</td>
+      <td>Coles Express</td>
+      <td>-31.863512</td>
+      <td>115.879279</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>7-Eleven Landsdale</td>
+      <td>156.9</td>
+      <td>7-Eleven</td>
+      <td>-31.804934</td>
+      <td>115.835741</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Coles Express Warwick (WA)</td>
+      <td>156.9</td>
+      <td>Coles Express</td>
+      <td>-31.844434</td>
+      <td>115.812742</td>
+    </tr>
+    <tr>
       <th>18</th>
       <td>United Ellenbrook</td>
       <td>156.9</td>
       <td>United</td>
-      <td>-31.77852</td>
-      <td>115.96699</td>
+      <td>-31.778520</td>
+      <td>115.966990</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>7-Eleven Balcatta</td>
+      <td>156.9</td>
+      <td>7-Eleven</td>
+      <td>-31.860353</td>
+      <td>115.809640</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>7-Eleven Joondalup</td>
+      <td>156.9</td>
+      <td>7-Eleven</td>
+      <td>-31.753934</td>
+      <td>115.765241</td>
     </tr>
     <tr>
       <th>17</th>
       <td>Coles Express Ellenbrook</td>
       <td>156.9</td>
       <td>Coles Express</td>
-      <td>-31.775</td>
-      <td>115.96</td>
+      <td>-31.775000</td>
+      <td>115.960000</td>
     </tr>
     <tr>
       <th>16</th>
@@ -220,28 +245,20 @@
       <td>115.804315</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>7-Eleven Balcatta</td>
-      <td>156.9</td>
-      <td>7-Eleven</td>
-      <td>-31.860353</td>
-      <td>115.80964</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>7-Eleven Joondalup</td>
-      <td>156.9</td>
-      <td>7-Eleven</td>
-      <td>-31.753934</td>
-      <td>115.765241</td>
-    </tr>
-    <tr>
       <th>27</th>
       <td>Shell Alkimos</td>
       <td>157.3</td>
       <td>Shell</td>
       <td>-31.628239</td>
-      <td>115.69118</td>
+      <td>115.691180</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>NightOwl Shell Highgate</td>
+      <td>157.5</td>
+      <td>Shell</td>
+      <td>-31.938231</td>
+      <td>115.877113</td>
     </tr>
     <tr>
       <th>35</th>
@@ -249,7 +266,7 @@
       <td>157.5</td>
       <td>Vibe</td>
       <td>-31.952307</td>
-      <td>115.83115</td>
+      <td>115.831150</td>
     </tr>
     <tr>
       <th>34</th>
@@ -268,22 +285,6 @@
       <td>115.840339</td>
     </tr>
     <tr>
-      <th>32</th>
-      <td>NightOwl Shell Highgate</td>
-      <td>157.5</td>
-      <td>Shell</td>
-      <td>-31.938231</td>
-      <td>115.877113</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>Better Choice Malaga</td>
-      <td>157.5</td>
-      <td>Better Choice</td>
-      <td>-31.855136</td>
-      <td>115.878229</td>
-    </tr>
-    <tr>
       <th>29</th>
       <td>United Lexia</td>
       <td>157.5</td>
@@ -296,7 +297,7 @@
       <td>Vibe Beechboro</td>
       <td>157.5</td>
       <td>Vibe</td>
-      <td>-31.869</td>
+      <td>-31.869000</td>
       <td>115.924439</td>
     </tr>
     <tr>
@@ -308,11 +309,19 @@
       <td>115.889889</td>
     </tr>
     <tr>
+      <th>30</th>
+      <td>Better Choice Malaga</td>
+      <td>157.5</td>
+      <td>Better Choice</td>
+      <td>-31.855136</td>
+      <td>115.878229</td>
+    </tr>
+    <tr>
       <th>36</th>
       <td>Puma Neerabup</td>
       <td>157.7</td>
       <td>Puma</td>
-      <td>-31.67127</td>
+      <td>-31.671270</td>
       <td>115.742022</td>
     </tr>
     <tr>
@@ -324,12 +333,44 @@
       <td>115.828363</td>
     </tr>
     <tr>
-      <th>47</th>
-      <td>Ampol Foodary Malaga</td>
+      <th>51</th>
+      <td>EG Ampol Morley Galleria</td>
+      <td>157.9</td>
+      <td>EG Ampol</td>
+      <td>-31.896262</td>
+      <td>115.895092</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Ampol Foodary Morley</td>
       <td>157.9</td>
       <td>Ampol</td>
-      <td>-31.848235</td>
-      <td>115.878484</td>
+      <td>-31.876015</td>
+      <td>115.925320</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Coles Express Kingsley</td>
+      <td>157.9</td>
+      <td>Coles Express</td>
+      <td>-31.819750</td>
+      <td>115.805778</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Caltex Malaga</td>
+      <td>157.9</td>
+      <td>Caltex</td>
+      <td>-31.852950</td>
+      <td>115.882059</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>7-Eleven Malaga</td>
+      <td>157.9</td>
+      <td>7-Eleven</td>
+      <td>-31.856778</td>
+      <td>115.908098</td>
     </tr>
     <tr>
       <th>53</th>
@@ -348,52 +389,12 @@
       <td>115.808184</td>
     </tr>
     <tr>
-      <th>51</th>
-      <td>EG Ampol Morley Galleria</td>
-      <td>157.9</td>
-      <td>EG Ampol</td>
-      <td>-31.896262</td>
-      <td>115.895092</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>Ampol Foodary Morley</td>
+      <th>47</th>
+      <td>Ampol Foodary Malaga</td>
       <td>157.9</td>
       <td>Ampol</td>
-      <td>-31.876015</td>
-      <td>115.92532</td>
-    </tr>
-    <tr>
-      <th>49</th>
-      <td>Caltex Malaga</td>
-      <td>157.9</td>
-      <td>Caltex</td>
-      <td>-31.85295</td>
-      <td>115.882059</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>7-Eleven Malaga</td>
-      <td>157.9</td>
-      <td>7-Eleven</td>
-      <td>-31.856778</td>
-      <td>115.908098</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>Coles Express Kingsley</td>
-      <td>157.9</td>
-      <td>Coles Express</td>
-      <td>-31.81975</td>
-      <td>115.805778</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>EG Ampol Ellenbrook</td>
-      <td>157.9</td>
-      <td>EG Ampol</td>
-      <td>-31.780889</td>
-      <td>115.969189</td>
+      <td>-31.848235</td>
+      <td>115.878484</td>
     </tr>
     <tr>
       <th>44</th>
@@ -402,6 +403,30 @@
       <td>BP</td>
       <td>-31.636611</td>
       <td>115.689599</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>7-Eleven Bassendean</td>
+      <td>157.9</td>
+      <td>7-Eleven</td>
+      <td>-31.906330</td>
+      <td>115.930868</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>EG Ampol Banksia Grove</td>
+      <td>157.9</td>
+      <td>EG Ampol</td>
+      <td>-31.704460</td>
+      <td>115.803863</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>7-Eleven Stirling</td>
+      <td>157.9</td>
+      <td>7-Eleven</td>
+      <td>-31.873400</td>
+      <td>115.828839</td>
     </tr>
     <tr>
       <th>43</th>
@@ -417,7 +442,15 @@
       <td>157.9</td>
       <td>Caltex</td>
       <td>-31.728704</td>
-      <td>115.76494</td>
+      <td>115.764940</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>EG Ampol Ellenbrook</td>
+      <td>157.9</td>
+      <td>EG Ampol</td>
+      <td>-31.780889</td>
+      <td>115.969189</td>
     </tr>
     <tr>
       <th>41</th>
@@ -426,30 +459,6 @@
       <td>7-Eleven</td>
       <td>-31.766075</td>
       <td>115.985544</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>7-Eleven Bassendean</td>
-      <td>157.9</td>
-      <td>7-Eleven</td>
-      <td>-31.9063297</td>
-      <td>115.9308682</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>EG Ampol Banksia Grove</td>
-      <td>157.9</td>
-      <td>EG Ampol</td>
-      <td>-31.70446</td>
-      <td>115.803863</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>7-Eleven Stirling</td>
-      <td>157.9</td>
-      <td>7-Eleven</td>
-      <td>-31.8734</td>
-      <td>115.828839</td>
     </tr>
     <tr>
       <th>54</th>
@@ -464,7 +473,7 @@
       <td>Coles Express Banksia Grove</td>
       <td>158.9</td>
       <td>Coles Express</td>
-      <td>-31.70653</td>
+      <td>-31.706530</td>
       <td>115.802679</td>
     </tr>
     <tr>
@@ -473,7 +482,7 @@
       <td>158.9</td>
       <td>Coles Express</td>
       <td>-31.906734</td>
-      <td>115.92665</td>
+      <td>115.926650</td>
     </tr>
     <tr>
       <th>57</th>
@@ -528,7 +537,7 @@
       <td>Vibe Bedford</td>
       <td>159.5</td>
       <td>Vibe</td>
-      <td>-31.9</td>
+      <td>-31.900000</td>
       <td>115.889257</td>
     </tr>
     <tr>
@@ -561,63 +570,15 @@
       <td>159.7</td>
       <td>Puma</td>
       <td>-31.936638</td>
-      <td>115.85796</td>
-    </tr>
-    <tr>
-      <th>88</th>
-      <td>7-Eleven Morley</td>
-      <td>159.9</td>
-      <td>7-Eleven</td>
-      <td>-31.903344</td>
-      <td>115.903047</td>
-    </tr>
-    <tr>
-      <th>89</th>
-      <td>Coles Express Mosman Park</td>
-      <td>159.9</td>
-      <td>Coles Express</td>
-      <td>-32.005184</td>
-      <td>115.759304</td>
-    </tr>
-    <tr>
-      <th>90</th>
-      <td>Ampol Foodary Mt Lawley</td>
-      <td>159.9</td>
-      <td>Ampol</td>
-      <td>-31.925179</td>
-      <td>115.881917</td>
-    </tr>
-    <tr>
-      <th>91</th>
-      <td>BP 2go Noranda</td>
-      <td>159.9</td>
-      <td>BP</td>
-      <td>-31.875859</td>
-      <td>115.894223</td>
-    </tr>
-    <tr>
-      <th>92</th>
-      <td>BP Connect Main Street</td>
-      <td>159.9</td>
-      <td>BP</td>
-      <td>-31.896277</td>
-      <td>115.82855</td>
+      <td>115.857960</td>
     </tr>
     <tr>
       <th>93</th>
       <td>EG Ampol Osborne Park</td>
       <td>159.9</td>
       <td>EG Ampol</td>
-      <td>-31.91058</td>
-      <td>115.81401</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>Ampol Foodary East Perth</td>
-      <td>159.9</td>
-      <td>Ampol</td>
-      <td>-31.948689</td>
-      <td>115.869567</td>
+      <td>-31.910580</td>
+      <td>115.814010</td>
     </tr>
     <tr>
       <th>97</th>
@@ -628,30 +589,6 @@
       <td>115.824234</td>
     </tr>
     <tr>
-      <th>96</th>
-      <td>United Quinns Rocks</td>
-      <td>159.9</td>
-      <td>United</td>
-      <td>-31.672657</td>
-      <td>115.708282</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>Coles Express Wangara</td>
-      <td>159.9</td>
-      <td>Coles Express</td>
-      <td>-31.791963</td>
-      <td>115.852478</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>Coles Express Wembley</td>
-      <td>159.9</td>
-      <td>Coles Express</td>
-      <td>-31.941023</td>
-      <td>115.811858</td>
-    </tr>
-    <tr>
       <th>100</th>
       <td>Ampol Foodary Westminster</td>
       <td>159.9</td>
@@ -660,60 +597,12 @@
       <td>115.829765</td>
     </tr>
     <tr>
-      <th>101</th>
-      <td>Caltex Yanchep</td>
-      <td>159.9</td>
-      <td>Caltex</td>
-      <td>-31.547779</td>
-      <td>115.641352</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>Caltex Yokine</td>
-      <td>159.9</td>
-      <td>Caltex</td>
-      <td>-31.904611</td>
-      <td>115.849565</td>
-    </tr>
-    <tr>
-      <th>87</th>
-      <td>BP Malaga</td>
-      <td>159.9</td>
-      <td>BP</td>
-      <td>-31.862067</td>
-      <td>115.894445</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>Coles Express Perth</td>
-      <td>159.9</td>
-      <td>Coles Express</td>
-      <td>-31.940953</td>
-      <td>115.863904</td>
-    </tr>
-    <tr>
-      <th>86</th>
-      <td>Ampol Foodary Kingsley</td>
-      <td>159.9</td>
-      <td>Ampol</td>
-      <td>-31.807038</td>
-      <td>115.788723</td>
-    </tr>
-    <tr>
       <th>82</th>
       <td>EG Ampol Floreat</td>
       <td>159.9</td>
       <td>EG Ampol</td>
-      <td>-31.93672</td>
+      <td>-31.936720</td>
       <td>115.793911</td>
-    </tr>
-    <tr>
-      <th>84</th>
-      <td>EG Ampol Whitfords</td>
-      <td>159.9</td>
-      <td>EG Ampol</td>
-      <td>-31.796683</td>
-      <td>115.745505</td>
     </tr>
     <tr>
       <th>68</th>
@@ -732,12 +621,44 @@
       <td>115.987368</td>
     </tr>
     <tr>
+      <th>94</th>
+      <td>Ampol Foodary East Perth</td>
+      <td>159.9</td>
+      <td>Ampol</td>
+      <td>-31.948689</td>
+      <td>115.869567</td>
+    </tr>
+    <tr>
       <th>70</th>
       <td>Ampol Foodary Northlands</td>
       <td>159.9</td>
       <td>Ampol</td>
       <td>-31.872542</td>
       <td>115.830984</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>Caltex Yokine</td>
+      <td>159.9</td>
+      <td>Caltex</td>
+      <td>-31.904611</td>
+      <td>115.849565</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>Coles Express Perth</td>
+      <td>159.9</td>
+      <td>Coles Express</td>
+      <td>-31.940953</td>
+      <td>115.863904</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>United Quinns Rocks</td>
+      <td>159.9</td>
+      <td>United</td>
+      <td>-31.672657</td>
+      <td>115.708282</td>
     </tr>
     <tr>
       <th>71</th>
@@ -748,6 +669,46 @@
       <td>115.819152</td>
     </tr>
     <tr>
+      <th>98</th>
+      <td>Coles Express Wangara</td>
+      <td>159.9</td>
+      <td>Coles Express</td>
+      <td>-31.791963</td>
+      <td>115.852478</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Coles Express Wembley</td>
+      <td>159.9</td>
+      <td>Coles Express</td>
+      <td>-31.941023</td>
+      <td>115.811858</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>BP Connect Main Street</td>
+      <td>159.9</td>
+      <td>BP</td>
+      <td>-31.896277</td>
+      <td>115.828550</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>Caltex Yanchep</td>
+      <td>159.9</td>
+      <td>Caltex</td>
+      <td>-31.547779</td>
+      <td>115.641352</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>Ampol Foodary Kingsley</td>
+      <td>159.9</td>
+      <td>Ampol</td>
+      <td>-31.807038</td>
+      <td>115.788723</td>
+    </tr>
+    <tr>
       <th>72</th>
       <td>EG Ampol Ballajura</td>
       <td>159.9</td>
@@ -756,12 +717,20 @@
       <td>115.906385</td>
     </tr>
     <tr>
+      <th>84</th>
+      <td>EG Ampol Whitfords</td>
+      <td>159.9</td>
+      <td>EG Ampol</td>
+      <td>-31.796683</td>
+      <td>115.745505</td>
+    </tr>
+    <tr>
       <th>73</th>
       <td>Ampol Foodary Butler</td>
       <td>159.9</td>
       <td>Ampol</td>
-      <td>-31.65413</td>
-      <td>115.71258</td>
+      <td>-31.654130</td>
+      <td>115.712580</td>
     </tr>
     <tr>
       <th>75</th>
@@ -772,30 +741,6 @@
       <td>115.715226</td>
     </tr>
     <tr>
-      <th>74</th>
-      <td>Coles Express Claremont</td>
-      <td>159.9</td>
-      <td>Coles Express</td>
-      <td>-31.982195</td>
-      <td>115.78389</td>
-    </tr>
-    <tr>
-      <th>77</th>
-      <td>Caltex Dayton</td>
-      <td>159.9</td>
-      <td>Caltex</td>
-      <td>-31.851089</td>
-      <td>115.968786</td>
-    </tr>
-    <tr>
-      <th>78</th>
-      <td>BP Connect East Perth</td>
-      <td>159.9</td>
-      <td>BP</td>
-      <td>-31.95077</td>
-      <td>115.876572</td>
-    </tr>
-    <tr>
       <th>79</th>
       <td>Coles Express Edgewater</td>
       <td>159.9</td>
@@ -804,28 +749,44 @@
       <td>115.778804</td>
     </tr>
     <tr>
-      <th>80</th>
-      <td>BP Ellenbrook</td>
-      <td>159.9</td>
-      <td>BP</td>
-      <td>-31.775436</td>
-      <td>115.963073</td>
-    </tr>
-    <tr>
-      <th>81</th>
-      <td>BP Embleton</td>
-      <td>159.9</td>
-      <td>BP</td>
-      <td>-31.8951</td>
-      <td>115.923206</td>
-    </tr>
-    <tr>
       <th>85</th>
       <td>Coles Express Jolimont</td>
       <td>159.9</td>
       <td>Coles Express</td>
       <td>-31.947273</td>
       <td>115.811941</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>BP Malaga</td>
+      <td>159.9</td>
+      <td>BP</td>
+      <td>-31.862067</td>
+      <td>115.894445</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>7-Eleven Morley</td>
+      <td>159.9</td>
+      <td>7-Eleven</td>
+      <td>-31.903344</td>
+      <td>115.903047</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>Coles Express Mosman Park</td>
+      <td>159.9</td>
+      <td>Coles Express</td>
+      <td>-32.005184</td>
+      <td>115.759304</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>Coles Express Claremont</td>
+      <td>159.9</td>
+      <td>Coles Express</td>
+      <td>-31.982195</td>
+      <td>115.783890</td>
     </tr>
     <tr>
       <th>83</th>
@@ -842,6 +803,54 @@
       <td>EG Ampol</td>
       <td>-31.742211</td>
       <td>115.740365</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>Ampol Foodary Mt Lawley</td>
+      <td>159.9</td>
+      <td>Ampol</td>
+      <td>-31.925179</td>
+      <td>115.881917</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>Caltex Dayton</td>
+      <td>159.9</td>
+      <td>Caltex</td>
+      <td>-31.851089</td>
+      <td>115.968786</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>BP Connect East Perth</td>
+      <td>159.9</td>
+      <td>BP</td>
+      <td>-31.950770</td>
+      <td>115.876572</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>BP 2go Noranda</td>
+      <td>159.9</td>
+      <td>BP</td>
+      <td>-31.875859</td>
+      <td>115.894223</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>BP Ellenbrook</td>
+      <td>159.9</td>
+      <td>BP</td>
+      <td>-31.775436</td>
+      <td>115.963073</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>BP Embleton</td>
+      <td>159.9</td>
+      <td>BP</td>
+      <td>-31.895100</td>
+      <td>115.923206</td>
     </tr>
     <tr>
       <th>103</th>
@@ -889,7 +898,7 @@
       <td>161.9</td>
       <td>7-Eleven</td>
       <td>-31.856494</td>
-      <td>115.83739</td>
+      <td>115.837390</td>
     </tr>
     <tr>
       <th>109</th>
@@ -904,7 +913,7 @@
       <td>EG Ampol Dianella</td>
       <td>161.9</td>
       <td>EG Ampol</td>
-      <td>-31.89674</td>
+      <td>-31.896740</td>
       <td>115.871865</td>
     </tr>
     <tr>
@@ -1020,12 +1029,12 @@
       <td>115.978636</td>
     </tr>
     <tr>
-      <th>136</th>
-      <td>BP 2go Woodvale</td>
+      <th>128</th>
+      <td>Ampol Foodary Glendalough</td>
       <td>163.9</td>
-      <td>BP</td>
-      <td>-31.799887</td>
-      <td>115.795979</td>
+      <td>Ampol</td>
+      <td>-31.922426</td>
+      <td>115.819754</td>
     </tr>
     <tr>
       <th>130</th>
@@ -1040,16 +1049,16 @@
       <td>BP Greenwood North</td>
       <td>163.9</td>
       <td>BP</td>
-      <td>-31.82089</td>
+      <td>-31.820890</td>
       <td>115.815729</td>
     </tr>
     <tr>
-      <th>125</th>
-      <td>BP Caversham</td>
+      <th>136</th>
+      <td>BP 2go Woodvale</td>
       <td>163.9</td>
       <td>BP</td>
-      <td>-31.871966</td>
-      <td>115.960195</td>
+      <td>-31.799887</td>
+      <td>115.795979</td>
     </tr>
     <tr>
       <th>127</th>
@@ -1073,7 +1082,7 @@
       <td>163.9</td>
       <td>Coles Express</td>
       <td>-31.638264</td>
-      <td>115.69551</td>
+      <td>115.695510</td>
     </tr>
     <tr>
       <th>123</th>
@@ -1108,12 +1117,12 @@
       <td>115.808055</td>
     </tr>
     <tr>
-      <th>128</th>
-      <td>Ampol Foodary Glendalough</td>
+      <th>125</th>
+      <td>BP Caversham</td>
       <td>163.9</td>
-      <td>Ampol</td>
-      <td>-31.922426</td>
-      <td>115.819754</td>
+      <td>BP</td>
+      <td>-31.871966</td>
+      <td>115.960195</td>
     </tr>
     <tr>
       <th>137</th>
@@ -1129,79 +1138,15 @@
       <td>165.7</td>
       <td>Puma</td>
       <td>-31.876337</td>
-      <td>115.79678</td>
+      <td>115.796780</td>
     </tr>
     <tr>
-      <th>149</th>
-      <td>BP Dog Swamp</td>
+      <th>143</th>
+      <td>BP Morley</td>
       <td>165.9</td>
       <td>BP</td>
-      <td>-31.911261</td>
-      <td>115.846928</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>BP Connect Wembley</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-31.940547</td>
-      <td>115.820095</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>BP Sorrento</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-31.832414</td>
-      <td>115.74792</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>BP Highgate</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-31.942556</td>
-      <td>115.867359</td>
-    </tr>
-    <tr>
-      <th>144</th>
-      <td>BP Connect Beaumauris</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-31.752351</td>
-      <td>115.74064</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>BP Connect West Coast</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-31.894578</td>
-      <td>115.757975</td>
-    </tr>
-    <tr>
-      <th>142</th>
-      <td>BP Nookenburra</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-31.902714</td>
-      <td>115.799177</td>
-    </tr>
-    <tr>
-      <th>141</th>
-      <td>BP Connect Currambine</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-31.723736</td>
-      <td>115.74642</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>7-Eleven Caversham</td>
-      <td>165.9</td>
-      <td>7-Eleven</td>
-      <td>-31.875469</td>
-      <td>115.974566</td>
+      <td>-31.894460</td>
+      <td>115.905330</td>
     </tr>
     <tr>
       <th>139</th>
@@ -1212,12 +1157,76 @@
       <td>115.705554</td>
     </tr>
     <tr>
-      <th>143</th>
-      <td>BP Morley</td>
+      <th>140</th>
+      <td>7-Eleven Caversham</td>
+      <td>165.9</td>
+      <td>7-Eleven</td>
+      <td>-31.875469</td>
+      <td>115.974566</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>BP Highgate</td>
       <td>165.9</td>
       <td>BP</td>
-      <td>-31.89446</td>
-      <td>115.90533</td>
+      <td>-31.942556</td>
+      <td>115.867359</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>BP Connect West Coast</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-31.894578</td>
+      <td>115.757975</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>BP Connect Currambine</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-31.723736</td>
+      <td>115.746420</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>BP Nookenburra</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-31.902714</td>
+      <td>115.799177</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>BP Sorrento</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-31.832414</td>
+      <td>115.747920</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>BP Connect Wembley</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-31.940547</td>
+      <td>115.820095</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>BP Dog Swamp</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-31.911261</td>
+      <td>115.846928</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>BP Connect Beaumauris</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-31.752351</td>
+      <td>115.740640</td>
     </tr>
     <tr>
       <th>150</th>
@@ -1225,7 +1234,7 @@
       <td>166.2</td>
       <td>Puma</td>
       <td>-31.887138</td>
-      <td>115.93832</td>
+      <td>115.938320</td>
     </tr>
     <tr>
       <th>153</th>
@@ -1233,7 +1242,7 @@
       <td>167.9</td>
       <td>BP</td>
       <td>-31.813708</td>
-      <td>115.75932</td>
+      <td>115.759320</td>
     </tr>
     <tr>
       <th>154</th>
@@ -1268,6 +1277,22 @@
       <td>115.852831</td>
     </tr>
     <tr>
+      <th>161</th>
+      <td>Ampol Rous Head</td>
+      <td>169.9</td>
+      <td>Ampol</td>
+      <td>-32.041146</td>
+      <td>115.738844</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>Ampol Foodary Wangara</td>
+      <td>169.9</td>
+      <td>Ampol</td>
+      <td>-31.787725</td>
+      <td>115.828285</td>
+    </tr>
+    <tr>
       <th>163</th>
       <td>Ampol Foodary Yanchep</td>
       <td>169.9</td>
@@ -1280,8 +1305,8 @@
       <td>Ampol Foodary Ashby</td>
       <td>169.9</td>
       <td>Ampol</td>
-      <td>-31.73256</td>
-      <td>115.80416</td>
+      <td>-31.732560</td>
+      <td>115.804160</td>
     </tr>
     <tr>
       <th>157</th>
@@ -1312,24 +1337,8 @@
       <td>Ampol Foodary Nedlands</td>
       <td>169.9</td>
       <td>Ampol</td>
-      <td>-31.97762</td>
+      <td>-31.977620</td>
       <td>115.813656</td>
-    </tr>
-    <tr>
-      <th>161</th>
-      <td>Ampol Rous Head</td>
-      <td>169.9</td>
-      <td>Ampol</td>
-      <td>-32.041146</td>
-      <td>115.738844</td>
-    </tr>
-    <tr>
-      <th>162</th>
-      <td>Ampol Foodary Wangara</td>
-      <td>169.9</td>
-      <td>Ampol</td>
-      <td>-31.787725</td>
-      <td>115.828285</td>
     </tr>
     <tr>
       <th>164</th>
@@ -1401,7 +1410,7 @@
       <td>153.5</td>
       <td>Vibe</td>
       <td>-32.245503</td>
-      <td>115.78259</td>
+      <td>115.782590</td>
     </tr>
     <tr>
       <th>8</th>
@@ -1428,14 +1437,6 @@
       <td>115.922947</td>
     </tr>
     <tr>
-      <th>12</th>
-      <td>Better Choice Naval Base</td>
-      <td>155.5</td>
-      <td>Better Choice</td>
-      <td>-32.206745</td>
-      <td>115.784712</td>
-    </tr>
-    <tr>
       <th>13</th>
       <td>NightOwl Shell Redcliffe</td>
       <td>155.5</td>
@@ -1450,6 +1451,14 @@
       <td>United</td>
       <td>-32.260187</td>
       <td>115.806552</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Better Choice Naval Base</td>
+      <td>155.5</td>
+      <td>Better Choice</td>
+      <td>-32.206745</td>
+      <td>115.784712</td>
     </tr>
     <tr>
       <th>14</th>
@@ -1481,7 +1490,7 @@
       <td>155.9</td>
       <td>Ampol</td>
       <td>-32.248836</td>
-      <td>115.78268</td>
+      <td>115.782680</td>
     </tr>
     <tr>
       <th>18</th>
@@ -1496,7 +1505,7 @@
       <td>Ampol Foodary O'Connor</td>
       <td>155.9</td>
       <td>Ampol</td>
-      <td>-32.05517</td>
+      <td>-32.055170</td>
       <td>115.793146</td>
     </tr>
     <tr>
@@ -1532,28 +1541,12 @@
       <td>115.934361</td>
     </tr>
     <tr>
-      <th>29</th>
-      <td>United South Lake</td>
-      <td>156.5</td>
-      <td>United</td>
-      <td>-32.111481</td>
-      <td>115.838833</td>
-    </tr>
-    <tr>
       <th>31</th>
       <td>Atlas Fuel Welshpool</td>
       <td>156.5</td>
       <td>Atlas</td>
       <td>-31.993707</td>
       <td>115.919139</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>United Southern River</td>
-      <td>156.5</td>
-      <td>United</td>
-      <td>-32.121136</td>
-      <td>115.954582</td>
     </tr>
     <tr>
       <th>28</th>
@@ -1564,20 +1557,20 @@
       <td>115.812611</td>
     </tr>
     <tr>
-      <th>26</th>
-      <td>United Maddington</td>
+      <th>29</th>
+      <td>United South Lake</td>
       <td>156.5</td>
       <td>United</td>
-      <td>-32.042356</td>
-      <td>115.99131</td>
+      <td>-32.111481</td>
+      <td>115.838833</td>
     </tr>
     <tr>
-      <th>25</th>
-      <td>United Kewdale</td>
+      <th>30</th>
+      <td>United Southern River</td>
       <td>156.5</td>
       <td>United</td>
-      <td>-31.990047</td>
-      <td>115.939258</td>
+      <td>-32.121136</td>
+      <td>115.954582</td>
     </tr>
     <tr>
       <th>24</th>
@@ -1596,6 +1589,22 @@
       <td>115.988733</td>
     </tr>
     <tr>
+      <th>25</th>
+      <td>United Kewdale</td>
+      <td>156.5</td>
+      <td>United</td>
+      <td>-31.990047</td>
+      <td>115.939258</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>United Maddington</td>
+      <td>156.5</td>
+      <td>United</td>
+      <td>-32.042356</td>
+      <td>115.991310</td>
+    </tr>
+    <tr>
       <th>32</th>
       <td>Vibe Jandakot</td>
       <td>156.7</td>
@@ -1604,68 +1613,28 @@
       <td>115.868846</td>
     </tr>
     <tr>
-      <th>40</th>
-      <td>7-Eleven Forrestdale</td>
+      <th>36</th>
+      <td>7-Eleven Booragoon</td>
       <td>156.9</td>
       <td>7-Eleven</td>
-      <td>-32.123564</td>
-      <td>115.956257</td>
+      <td>-32.039537</td>
+      <td>115.822893</td>
     </tr>
     <tr>
-      <th>48</th>
-      <td>Coles Express Waikiki</td>
+      <th>37</th>
+      <td>Liberty Calista</td>
       <td>156.9</td>
-      <td>Coles Express</td>
-      <td>-32.315121</td>
-      <td>115.753183</td>
+      <td>Liberty</td>
+      <td>-32.248776</td>
+      <td>115.808019</td>
     </tr>
     <tr>
-      <th>47</th>
-      <td>Coles Express Southern River</td>
-      <td>156.9</td>
-      <td>Coles Express</td>
-      <td>-32.103521</td>
-      <td>115.934721</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>7-Eleven Southern River</td>
+      <th>38</th>
+      <td>7-Eleven Canning Vale</td>
       <td>156.9</td>
       <td>7-Eleven</td>
-      <td>-32.107884</td>
-      <td>115.939718</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>Coles Express Westfield</td>
-      <td>156.9</td>
-      <td>Coles Express</td>
-      <td>-32.130396</td>
-      <td>116.000966</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>Ampol Foodary Rivervale</td>
-      <td>156.9</td>
-      <td>Ampol</td>
-      <td>-31.953623</td>
-      <td>115.913619</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>Coles Express Myaree</td>
-      <td>156.9</td>
-      <td>Coles Express</td>
-      <td>-32.039649</td>
-      <td>115.815283</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>7-Eleven Maddington South</td>
-      <td>156.9</td>
-      <td>7-Eleven</td>
-      <td>-32.055377</td>
-      <td>115.9886</td>
+      <td>-32.092476</td>
+      <td>115.923934</td>
     </tr>
     <tr>
       <th>39</th>
@@ -1684,36 +1653,28 @@
       <td>115.893756</td>
     </tr>
     <tr>
-      <th>38</th>
-      <td>7-Eleven Canning Vale</td>
+      <th>40</th>
+      <td>7-Eleven Forrestdale</td>
       <td>156.9</td>
       <td>7-Eleven</td>
-      <td>-32.092476</td>
-      <td>115.923934</td>
+      <td>-32.123564</td>
+      <td>115.956257</td>
     </tr>
     <tr>
-      <th>37</th>
-      <td>Liberty Calista</td>
+      <th>48</th>
+      <td>Coles Express Waikiki</td>
       <td>156.9</td>
-      <td>Liberty</td>
-      <td>-32.248776</td>
-      <td>115.808019</td>
+      <td>Coles Express</td>
+      <td>-32.315121</td>
+      <td>115.753183</td>
     </tr>
     <tr>
-      <th>36</th>
-      <td>7-Eleven Booragoon</td>
+      <th>46</th>
+      <td>7-Eleven Southern River</td>
       <td>156.9</td>
       <td>7-Eleven</td>
-      <td>-32.039537</td>
-      <td>115.822893</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>Ampol Foodary Belmont</td>
-      <td>156.9</td>
-      <td>Ampol</td>
-      <td>-31.937734</td>
-      <td>115.933447</td>
+      <td>-32.107884</td>
+      <td>115.939718</td>
     </tr>
     <tr>
       <th>34</th>
@@ -1724,12 +1685,28 @@
       <td>115.925077</td>
     </tr>
     <tr>
+      <th>35</th>
+      <td>Ampol Foodary Belmont</td>
+      <td>156.9</td>
+      <td>Ampol</td>
+      <td>-31.937734</td>
+      <td>115.933447</td>
+    </tr>
+    <tr>
       <th>33</th>
       <td>Ampol Foodary Ascot</td>
       <td>156.9</td>
       <td>Ampol</td>
-      <td>-31.94098</td>
+      <td>-31.940980</td>
       <td>115.926337</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>7-Eleven Maddington South</td>
+      <td>156.9</td>
+      <td>7-Eleven</td>
+      <td>-32.055377</td>
+      <td>115.988600</td>
     </tr>
     <tr>
       <th>41</th>
@@ -1738,6 +1715,38 @@
       <td>7-Eleven</td>
       <td>-32.128644</td>
       <td>115.999775</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Coles Express Myaree</td>
+      <td>156.9</td>
+      <td>Coles Express</td>
+      <td>-32.039649</td>
+      <td>115.815283</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Ampol Foodary Rivervale</td>
+      <td>156.9</td>
+      <td>Ampol</td>
+      <td>-31.953623</td>
+      <td>115.913619</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Coles Express Westfield</td>
+      <td>156.9</td>
+      <td>Coles Express</td>
+      <td>-32.130396</td>
+      <td>116.000966</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Coles Express Southern River</td>
+      <td>156.9</td>
+      <td>Coles Express</td>
+      <td>-32.103521</td>
+      <td>115.934721</td>
     </tr>
     <tr>
       <th>50</th>
@@ -1756,11 +1765,19 @@
       <td>115.762171</td>
     </tr>
     <tr>
+      <th>53</th>
+      <td>United Byford</td>
+      <td>157.5</td>
+      <td>United</td>
+      <td>-32.215444</td>
+      <td>116.008030</td>
+    </tr>
+    <tr>
       <th>54</th>
       <td>United East Victoria Park</td>
       <td>157.5</td>
       <td>United</td>
-      <td>-31.98781</td>
+      <td>-31.987810</td>
       <td>115.905402</td>
     </tr>
     <tr>
@@ -1770,14 +1787,6 @@
       <td>Vibe</td>
       <td>-32.221206</td>
       <td>116.009206</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>United Byford</td>
-      <td>157.5</td>
-      <td>United</td>
-      <td>-32.2154436</td>
-      <td>116.0080304</td>
     </tr>
     <tr>
       <th>51</th>
@@ -1802,22 +1811,6 @@
       <td>Puma</td>
       <td>-32.034609</td>
       <td>116.000915</td>
-    </tr>
-    <tr>
-      <th>71</th>
-      <td>EG Ampol Warnbro</td>
-      <td>157.9</td>
-      <td>EG Ampol</td>
-      <td>-32.345819</td>
-      <td>115.761444</td>
-    </tr>
-    <tr>
-      <th>70</th>
-      <td>Coles Express South Perth</td>
-      <td>157.9</td>
-      <td>Coles Express</td>
-      <td>-31.974773</td>
-      <td>115.881635</td>
     </tr>
     <tr>
       <th>69</th>
@@ -1860,6 +1853,38 @@
       <td>115.779519</td>
     </tr>
     <tr>
+      <th>71</th>
+      <td>EG Ampol Warnbro</td>
+      <td>157.9</td>
+      <td>EG Ampol</td>
+      <td>-32.345819</td>
+      <td>115.761444</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>Coles Express South Perth</td>
+      <td>157.9</td>
+      <td>Coles Express</td>
+      <td>-31.974773</td>
+      <td>115.881635</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>United Armadale</td>
+      <td>157.9</td>
+      <td>United</td>
+      <td>-32.161492</td>
+      <td>116.017600</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>EG Ampol Cannington</td>
+      <td>157.9</td>
+      <td>EG Ampol</td>
+      <td>-32.016640</td>
+      <td>115.938196</td>
+    </tr>
+    <tr>
       <th>63</th>
       <td>Coles Express Bull Creek</td>
       <td>157.9</td>
@@ -1880,7 +1905,7 @@
       <td>Coles Express Bicton</td>
       <td>157.9</td>
       <td>Coles Express</td>
-      <td>-32.03413</td>
+      <td>-32.034130</td>
       <td>115.792776</td>
     </tr>
     <tr>
@@ -1898,22 +1923,6 @@
       <td>BP</td>
       <td>-31.940482</td>
       <td>115.927498</td>
-    </tr>
-    <tr>
-      <th>58</th>
-      <td>United Armadale</td>
-      <td>157.9</td>
-      <td>United</td>
-      <td>-32.161492</td>
-      <td>116.0176</td>
-    </tr>
-    <tr>
-      <th>64</th>
-      <td>EG Ampol Cannington</td>
-      <td>157.9</td>
-      <td>EG Ampol</td>
-      <td>-32.01664</td>
-      <td>115.938196</td>
     </tr>
     <tr>
       <th>76</th>
@@ -1956,14 +1965,6 @@
       <td>116.017576</td>
     </tr>
     <tr>
-      <th>80</th>
-      <td>Vibe Yangebup</td>
-      <td>159.5</td>
-      <td>Vibe</td>
-      <td>-32.116891</td>
-      <td>115.795446</td>
-    </tr>
-    <tr>
       <th>79</th>
       <td>Vibe Spearwood</td>
       <td>159.5</td>
@@ -1972,12 +1973,12 @@
       <td>115.782419</td>
     </tr>
     <tr>
-      <th>77</th>
-      <td>Vibe Hamilton Hill</td>
+      <th>80</th>
+      <td>Vibe Yangebup</td>
       <td>159.5</td>
       <td>Vibe</td>
-      <td>-32.086143</td>
-      <td>115.777233</td>
+      <td>-32.116891</td>
+      <td>115.795446</td>
     </tr>
     <tr>
       <th>78</th>
@@ -1988,12 +1989,20 @@
       <td>115.922099</td>
     </tr>
     <tr>
-      <th>88</th>
-      <td>Puma Warnbro</td>
+      <th>77</th>
+      <td>Vibe Hamilton Hill</td>
+      <td>159.5</td>
+      <td>Vibe</td>
+      <td>-32.086143</td>
+      <td>115.777233</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>Puma Munster</td>
       <td>159.7</td>
       <td>Puma</td>
-      <td>-32.326142</td>
-      <td>115.749757</td>
+      <td>-32.122463</td>
+      <td>115.784194</td>
     </tr>
     <tr>
       <th>86</th>
@@ -2008,16 +2017,16 @@
       <td>BP Langford</td>
       <td>159.7</td>
       <td>BP</td>
-      <td>-32.04723</td>
+      <td>-32.047230</td>
       <td>115.932375</td>
     </tr>
     <tr>
-      <th>87</th>
-      <td>Puma Munster</td>
+      <th>88</th>
+      <td>Puma Warnbro</td>
       <td>159.7</td>
       <td>Puma</td>
-      <td>-32.122463</td>
-      <td>115.784194</td>
+      <td>-32.326142</td>
+      <td>115.749757</td>
     </tr>
     <tr>
       <th>83</th>
@@ -2036,20 +2045,20 @@
       <td>115.969087</td>
     </tr>
     <tr>
-      <th>81</th>
-      <td>Puma Belmont</td>
-      <td>159.7</td>
-      <td>Puma</td>
-      <td>-31.946289</td>
-      <td>115.939633</td>
-    </tr>
-    <tr>
       <th>84</th>
       <td>Puma Parmelia</td>
       <td>159.7</td>
       <td>Puma</td>
       <td>-32.247336</td>
       <td>115.816983</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>Puma Belmont</td>
+      <td>159.7</td>
+      <td>Puma</td>
+      <td>-31.946289</td>
+      <td>115.939633</td>
     </tr>
     <tr>
       <th>89</th>
@@ -2073,7 +2082,7 @@
       <td>159.9</td>
       <td>7-Eleven</td>
       <td>-32.125599</td>
-      <td>115.92601</td>
+      <td>115.926010</td>
     </tr>
     <tr>
       <th>109</th>
@@ -2081,7 +2090,7 @@
       <td>159.9</td>
       <td>BP</td>
       <td>-32.244379</td>
-      <td>115.81264</td>
+      <td>115.812640</td>
     </tr>
     <tr>
       <th>110</th>
@@ -2116,12 +2125,44 @@
       <td>115.781843</td>
     </tr>
     <tr>
+      <th>119</th>
+      <td>Ampol Foodary Secret Harbour</td>
+      <td>159.9</td>
+      <td>Ampol</td>
+      <td>-32.407011</td>
+      <td>115.759423</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>Ampol Willetton</td>
+      <td>159.9</td>
+      <td>Ampol</td>
+      <td>-32.039109</td>
+      <td>115.884060</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>7-Eleven Golden Bay</td>
+      <td>159.9</td>
+      <td>7-Eleven</td>
+      <td>-32.420777</td>
+      <td>115.761055</td>
+    </tr>
+    <tr>
       <th>107</th>
       <td>Caltex Hamilton Hill South</td>
       <td>159.9</td>
       <td>Caltex</td>
       <td>-32.093152</td>
       <td>115.783081</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>EG Ampol Port Kennedy</td>
+      <td>159.9</td>
+      <td>EG Ampol</td>
+      <td>-32.373781</td>
+      <td>115.755920</td>
     </tr>
     <tr>
       <th>116</th>
@@ -2136,24 +2177,8 @@
       <td>Ampol Foodary Riverton</td>
       <td>159.9</td>
       <td>Ampol</td>
-      <td>-32.03846</td>
+      <td>-32.038460</td>
       <td>115.896732</td>
-    </tr>
-    <tr>
-      <th>118</th>
-      <td>Ampol Foodary Rockingham</td>
-      <td>159.9</td>
-      <td>Ampol</td>
-      <td>-32.2769</td>
-      <td>115.749819</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>Ampol Foodary Secret Harbour</td>
-      <td>159.9</td>
-      <td>Ampol</td>
-      <td>-32.407011</td>
-      <td>115.759423</td>
     </tr>
     <tr>
       <th>120</th>
@@ -2164,44 +2189,28 @@
       <td>115.829221</td>
     </tr>
     <tr>
-      <th>121</th>
-      <td>Ampol Willetton</td>
+      <th>118</th>
+      <td>Ampol Foodary Rockingham</td>
       <td>159.9</td>
       <td>Ampol</td>
-      <td>-32.039109</td>
-      <td>115.88406</td>
+      <td>-32.276900</td>
+      <td>115.749819</td>
     </tr>
     <tr>
-      <th>115</th>
-      <td>EG Ampol Port Kennedy</td>
-      <td>159.9</td>
-      <td>EG Ampol</td>
-      <td>-32.373781</td>
-      <td>115.75592</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>7-Eleven Golden Bay</td>
-      <td>159.9</td>
-      <td>7-Eleven</td>
-      <td>-32.420777</td>
-      <td>115.761055</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>Ampol Foodary Bentley</td>
+      <th>101</th>
+      <td>Ampol Foodary Cannington</td>
       <td>159.9</td>
       <td>Ampol</td>
-      <td>-32.012142</td>
-      <td>115.914131</td>
+      <td>-32.017556</td>
+      <td>115.934873</td>
     </tr>
     <tr>
-      <th>104</th>
-      <td>Caltex Forrestdale</td>
+      <th>102</th>
+      <td>Coles Express Cloverdale</td>
       <td>159.9</td>
-      <td>Caltex</td>
-      <td>-32.14267</td>
-      <td>115.974144</td>
+      <td>Coles Express</td>
+      <td>-31.965057</td>
+      <td>115.933164</td>
     </tr>
     <tr>
       <th>90</th>
@@ -2241,7 +2250,7 @@
       <td>159.9</td>
       <td>Caltex</td>
       <td>-32.353665</td>
-      <td>115.80765</td>
+      <td>115.807650</td>
     </tr>
     <tr>
       <th>96</th>
@@ -2258,6 +2267,38 @@
       <td>Coles Express</td>
       <td>-32.147485</td>
       <td>115.985303</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>Coles Express Victoria Park</td>
+      <td>159.9</td>
+      <td>Coles Express</td>
+      <td>-31.985535</td>
+      <td>115.896186</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>Coles Express Fremantle</td>
+      <td>159.9</td>
+      <td>Coles Express</td>
+      <td>-32.063235</td>
+      <td>115.756663</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Ampol Foodary Bentley</td>
+      <td>159.9</td>
+      <td>Ampol</td>
+      <td>-32.012142</td>
+      <td>115.914131</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>Caltex Forrestdale</td>
+      <td>159.9</td>
+      <td>Caltex</td>
+      <td>-32.142670</td>
+      <td>115.974144</td>
     </tr>
     <tr>
       <th>98</th>
@@ -2284,38 +2325,6 @@
       <td>115.909084</td>
     </tr>
     <tr>
-      <th>101</th>
-      <td>Ampol Foodary Cannington</td>
-      <td>159.9</td>
-      <td>Ampol</td>
-      <td>-32.017556</td>
-      <td>115.934873</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>Coles Express Cloverdale</td>
-      <td>159.9</td>
-      <td>Coles Express</td>
-      <td>-31.965057</td>
-      <td>115.933164</td>
-    </tr>
-    <tr>
-      <th>103</th>
-      <td>Coles Express Victoria Park</td>
-      <td>159.9</td>
-      <td>Coles Express</td>
-      <td>-31.985535</td>
-      <td>115.896186</td>
-    </tr>
-    <tr>
-      <th>105</th>
-      <td>Coles Express Fremantle</td>
-      <td>159.9</td>
-      <td>Coles Express</td>
-      <td>-32.063235</td>
-      <td>115.756663</td>
-    </tr>
-    <tr>
       <th>122</th>
       <td>Better Choice Como</td>
       <td>161.5</td>
@@ -2328,7 +2337,7 @@
       <td>Ampol Foodary Bannister Road</td>
       <td>161.9</td>
       <td>Ampol</td>
-      <td>-32.06343</td>
+      <td>-32.063430</td>
       <td>115.926402</td>
     </tr>
     <tr>
@@ -2401,95 +2410,7 @@
       <td>163.7</td>
       <td>Puma</td>
       <td>-32.151032</td>
-      <td>116.01409</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>BP Woodbridge</td>
-      <td>163.9</td>
-      <td>BP</td>
-      <td>-31.890354</td>
-      <td>115.995715</td>
-    </tr>
-    <tr>
-      <th>144</th>
-      <td>BP Connect Palm Springs</td>
-      <td>163.9</td>
-      <td>BP</td>
-      <td>-32.348315</td>
-      <td>115.761753</td>
-    </tr>
-    <tr>
-      <th>143</th>
-      <td>OTR Roleystone</td>
-      <td>163.9</td>
-      <td>Caltex</td>
-      <td>-32.115893</td>
-      <td>116.083267</td>
-    </tr>
-    <tr>
-      <th>142</th>
-      <td>BP Connect Riverton</td>
-      <td>163.9</td>
-      <td>BP</td>
-      <td>-32.038908</td>
-      <td>115.904355</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>Coles Express Kwinana Beach</td>
-      <td>163.9</td>
-      <td>Coles Express</td>
-      <td>-32.243693</td>
-      <td>115.776587</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>Coles Express Kewdale</td>
-      <td>163.9</td>
-      <td>Coles Express</td>
-      <td>-31.980262</td>
-      <td>115.958507</td>
-    </tr>
-    <tr>
-      <th>141</th>
-      <td>Coles Express Mount Pleasant</td>
-      <td>163.9</td>
-      <td>Coles Express</td>
-      <td>-32.012511</td>
-      <td>115.850077</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>BP Beeliar</td>
-      <td>163.9</td>
-      <td>BP</td>
-      <td>-32.127157</td>
-      <td>115.843357</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>Coles Express Canning Vale</td>
-      <td>163.9</td>
-      <td>Coles Express</td>
-      <td>-32.070349</td>
-      <td>115.895596</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>7-Eleven Byford South</td>
-      <td>163.9</td>
-      <td>7-Eleven</td>
-      <td>-32.222078</td>
-      <td>116.005916</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>Ampol Foodary Byford</td>
-      <td>163.9</td>
-      <td>Ampol</td>
-      <td>-32.226368</td>
-      <td>116.008</td>
+      <td>116.014090</td>
     </tr>
     <tr>
       <th>133</th>
@@ -2500,12 +2421,100 @@
       <td>115.807471</td>
     </tr>
     <tr>
+      <th>134</th>
+      <td>Ampol Foodary Byford</td>
+      <td>163.9</td>
+      <td>Ampol</td>
+      <td>-32.226368</td>
+      <td>116.008000</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>7-Eleven Byford South</td>
+      <td>163.9</td>
+      <td>7-Eleven</td>
+      <td>-32.222078</td>
+      <td>116.005916</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>Coles Express Canning Vale</td>
+      <td>163.9</td>
+      <td>Coles Express</td>
+      <td>-32.070349</td>
+      <td>115.895596</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>Coles Express Kwinana Beach</td>
+      <td>163.9</td>
+      <td>Coles Express</td>
+      <td>-32.243693</td>
+      <td>115.776587</td>
+    </tr>
+    <tr>
       <th>138</th>
       <td>7-Eleven Kardinya</td>
       <td>163.9</td>
       <td>7-Eleven</td>
       <td>-32.067327</td>
       <td>115.815185</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>Coles Express Kewdale</td>
+      <td>163.9</td>
+      <td>Coles Express</td>
+      <td>-31.980262</td>
+      <td>115.958507</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>BP Beeliar</td>
+      <td>163.9</td>
+      <td>BP</td>
+      <td>-32.127157</td>
+      <td>115.843357</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>Coles Express Mount Pleasant</td>
+      <td>163.9</td>
+      <td>Coles Express</td>
+      <td>-32.012511</td>
+      <td>115.850077</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>BP Connect Riverton</td>
+      <td>163.9</td>
+      <td>BP</td>
+      <td>-32.038908</td>
+      <td>115.904355</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>OTR Roleystone</td>
+      <td>163.9</td>
+      <td>Caltex</td>
+      <td>-32.115893</td>
+      <td>116.083267</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>BP Connect Palm Springs</td>
+      <td>163.9</td>
+      <td>BP</td>
+      <td>-32.348315</td>
+      <td>115.761753</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>BP Woodbridge</td>
+      <td>163.9</td>
+      <td>BP</td>
+      <td>-31.890354</td>
+      <td>115.995715</td>
     </tr>
     <tr>
       <th>146</th>
@@ -2516,60 +2525,12 @@
       <td>115.946469</td>
     </tr>
     <tr>
-      <th>164</th>
-      <td>BP Waikiki</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-32.310013</td>
-      <td>115.732329</td>
-    </tr>
-    <tr>
-      <th>161</th>
-      <td>BP Port Kennedy</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-32.371178</td>
-      <td>115.763127</td>
-    </tr>
-    <tr>
-      <th>162</th>
-      <td>7-Eleven Queens Park</td>
+      <th>168</th>
+      <td>7-Eleven Thornlie</td>
       <td>165.9</td>
       <td>7-Eleven</td>
-      <td>-31.997151</td>
-      <td>115.946773</td>
-    </tr>
-    <tr>
-      <th>163</th>
-      <td>BP Connect Rockingham Park</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-32.289729</td>
-      <td>115.741484</td>
-    </tr>
-    <tr>
-      <th>165</th>
-      <td>BP Connect South Perth</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-31.972713</td>
-      <td>115.852043</td>
-    </tr>
-    <tr>
-      <th>160</th>
-      <td>BP Connect Myaree</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-32.045815</td>
-      <td>115.82024</td>
-    </tr>
-    <tr>
-      <th>166</th>
-      <td>BP Connect Phoenix</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-32.093975</td>
-      <td>115.783039</td>
+      <td>-32.069540</td>
+      <td>115.952095</td>
     </tr>
     <tr>
       <th>167</th>
@@ -2580,12 +2541,12 @@
       <td>115.839346</td>
     </tr>
     <tr>
-      <th>168</th>
-      <td>7-Eleven Thornlie</td>
+      <th>166</th>
+      <td>BP Connect Phoenix</td>
       <td>165.9</td>
-      <td>7-Eleven</td>
-      <td>-32.06954</td>
-      <td>115.952095</td>
+      <td>BP</td>
+      <td>-32.093975</td>
+      <td>115.783039</td>
     </tr>
     <tr>
       <th>169</th>
@@ -2596,12 +2557,52 @@
       <td>115.903652</td>
     </tr>
     <tr>
+      <th>160</th>
+      <td>BP Connect Myaree</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-32.045815</td>
+      <td>115.820240</td>
+    </tr>
+    <tr>
       <th>170</th>
       <td>BP 2go Burrendah</td>
       <td>165.9</td>
       <td>BP</td>
       <td>-32.058316</td>
       <td>115.882114</td>
+    </tr>
+    <tr>
+      <th>161</th>
+      <td>BP Port Kennedy</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-32.371178</td>
+      <td>115.763127</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>BP Waikiki</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-32.310013</td>
+      <td>115.732329</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>BP Connect Rockingham Park</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-32.289729</td>
+      <td>115.741484</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>7-Eleven Queens Park</td>
+      <td>165.9</td>
+      <td>7-Eleven</td>
+      <td>-31.997151</td>
+      <td>115.946773</td>
     </tr>
     <tr>
       <th>159</th>
@@ -2612,12 +2613,60 @@
       <td>115.819959</td>
     </tr>
     <tr>
-      <th>151</th>
-      <td>7-Eleven Bibra Lake</td>
+      <th>165</th>
+      <td>BP Connect South Perth</td>
       <td>165.9</td>
-      <td>7-Eleven</td>
-      <td>-32.101411</td>
-      <td>115.801664</td>
+      <td>BP</td>
+      <td>-31.972713</td>
+      <td>115.852043</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>BP Thornlie</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-32.063416</td>
+      <td>115.936309</td>
+    </tr>
+    <tr>
+      <th>158</th>
+      <td>BP Huntingdale</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-32.071421</td>
+      <td>115.966472</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>BP Baldivis Southbound Travel Centre</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-32.309281</td>
+      <td>115.832770</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>BP Baldivis Northbound Travel Centre</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-32.309137</td>
+      <td>115.830397</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>BP 2go Armadale</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-32.148535</td>
+      <td>116.020351</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>BP Attadale</td>
+      <td>165.9</td>
+      <td>BP</td>
+      <td>-32.031651</td>
+      <td>115.808961</td>
     </tr>
     <tr>
       <th>157</th>
@@ -2636,12 +2685,12 @@
       <td>115.969456</td>
     </tr>
     <tr>
-      <th>155</th>
-      <td>7-Eleven Rockingham</td>
+      <th>153</th>
+      <td>7-Eleven Carlisle</td>
       <td>165.9</td>
       <td>7-Eleven</td>
-      <td>-32.276643</td>
-      <td>115.777477</td>
+      <td>-31.971624</td>
+      <td>115.918341</td>
     </tr>
     <tr>
       <th>154</th>
@@ -2652,68 +2701,28 @@
       <td>115.780512</td>
     </tr>
     <tr>
-      <th>153</th>
-      <td>7-Eleven Carlisle</td>
+      <th>155</th>
+      <td>7-Eleven Rockingham</td>
       <td>165.9</td>
       <td>7-Eleven</td>
-      <td>-31.971624</td>
-      <td>115.918341</td>
+      <td>-32.276643</td>
+      <td>115.777477</td>
     </tr>
     <tr>
-      <th>152</th>
-      <td>BP Thornlie</td>
+      <th>151</th>
+      <td>7-Eleven Bibra Lake</td>
       <td>165.9</td>
-      <td>BP</td>
-      <td>-32.063416</td>
-      <td>115.936309</td>
+      <td>7-Eleven</td>
+      <td>-32.101411</td>
+      <td>115.801664</td>
     </tr>
     <tr>
-      <th>150</th>
-      <td>BP Baldivis Northbound Travel Centre</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-32.309137</td>
-      <td>115.830397</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>BP Baldivis Southbound Travel Centre</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-32.309281</td>
-      <td>115.83277</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>BP Attadale</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-32.031651</td>
-      <td>115.808961</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>BP 2go Armadale</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-32.148535</td>
-      <td>116.020351</td>
-    </tr>
-    <tr>
-      <th>158</th>
-      <td>BP Huntingdale</td>
-      <td>165.9</td>
-      <td>BP</td>
-      <td>-32.071421</td>
-      <td>115.966472</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>BP Connect Thomsons Lake</td>
+      <th>177</th>
+      <td>BP South Fremantle</td>
       <td>167.9</td>
       <td>BP</td>
-      <td>-32.129169</td>
-      <td>115.853726</td>
+      <td>-32.076871</td>
+      <td>115.760944</td>
     </tr>
     <tr>
       <th>176</th>
@@ -2732,12 +2741,12 @@
       <td>115.936881</td>
     </tr>
     <tr>
-      <th>177</th>
-      <td>BP South Fremantle</td>
+      <th>178</th>
+      <td>BP Connect Thomsons Lake</td>
       <td>167.9</td>
       <td>BP</td>
-      <td>-32.076871</td>
-      <td>115.760944</td>
+      <td>-32.129169</td>
+      <td>115.853726</td>
     </tr>
     <tr>
       <th>173</th>
@@ -2756,20 +2765,20 @@
       <td>115.918797</td>
     </tr>
     <tr>
-      <th>171</th>
-      <td>BP Applecross</td>
-      <td>167.9</td>
-      <td>BP</td>
-      <td>-32.01507</td>
-      <td>115.84318</td>
-    </tr>
-    <tr>
       <th>174</th>
       <td>Karnup Roadhouse</td>
       <td>167.9</td>
       <td>BP</td>
       <td>-32.427429</td>
-      <td>115.77467</td>
+      <td>115.774670</td>
+    </tr>
+    <tr>
+      <th>171</th>
+      <td>BP Applecross</td>
+      <td>167.9</td>
+      <td>BP</td>
+      <td>-32.015070</td>
+      <td>115.843180</td>
     </tr>
     <tr>
       <th>179</th>
@@ -2784,16 +2793,8 @@
       <td>Puma Henderson OPT</td>
       <td>169.7</td>
       <td>Puma</td>
-      <td>-32.15551</td>
+      <td>-32.155510</td>
       <td>115.770485</td>
-    </tr>
-    <tr>
-      <th>192</th>
-      <td>Ampol Foodary Yangebup</td>
-      <td>169.9</td>
-      <td>Ampol</td>
-      <td>-32.127568</td>
-      <td>115.799158</td>
     </tr>
     <tr>
       <th>191</th>
@@ -2809,7 +2810,7 @@
       <td>169.9</td>
       <td>Ampol</td>
       <td>-32.055755</td>
-      <td>115.96194</td>
+      <td>115.961940</td>
     </tr>
     <tr>
       <th>189</th>
@@ -2824,7 +2825,7 @@
       <td>Ampol Foodary Kewdale</td>
       <td>169.9</td>
       <td>Ampol</td>
-      <td>-31.98365</td>
+      <td>-31.983650</td>
       <td>115.955901</td>
     </tr>
     <tr>
@@ -2834,6 +2835,22 @@
       <td>Ampol</td>
       <td>-32.126786</td>
       <td>115.862138</td>
+    </tr>
+    <tr>
+      <th>192</th>
+      <td>Ampol Foodary Yangebup</td>
+      <td>169.9</td>
+      <td>Ampol</td>
+      <td>-32.127568</td>
+      <td>115.799158</td>
+    </tr>
+    <tr>
+      <th>186</th>
+      <td>Ampol Foodary Gosnells</td>
+      <td>169.9</td>
+      <td>Ampol</td>
+      <td>-32.079794</td>
+      <td>115.988117</td>
     </tr>
     <tr>
       <th>185</th>
@@ -2856,8 +2873,8 @@
       <td>Ampol Bibra Lake Diesel Stop</td>
       <td>169.9</td>
       <td>Ampol</td>
-      <td>-32.1094</td>
-      <td>115.8097</td>
+      <td>-32.109400</td>
+      <td>115.809700</td>
     </tr>
     <tr>
       <th>182</th>
@@ -2872,16 +2889,8 @@
       <td>Ampol Foodary Applecross</td>
       <td>169.9</td>
       <td>Ampol</td>
-      <td>-32.01154</td>
+      <td>-32.011540</td>
       <td>115.850201</td>
-    </tr>
-    <tr>
-      <th>186</th>
-      <td>Ampol Foodary Gosnells</td>
-      <td>169.9</td>
-      <td>Ampol</td>
-      <td>-32.079794</td>
-      <td>115.988117</td>
     </tr>
     <tr>
       <th>193</th>
@@ -2904,10 +2913,12 @@
       <td>Mundijong Store &amp; Deli</td>
       <td>189.0</td>
       <td>Independent</td>
-      <td>-32.29564</td>
+      <td>-32.295640</td>
       <td>115.985466</td>
     </tr>
   </tbody>
 </table>
+        </div>
+    </div>
 </body>
 </html>

@@ -75,7 +75,7 @@ pricesPerth
 )
 # %%
 
-pricesPerth
+prices
 
 # %%
 '''
