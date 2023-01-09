@@ -99,6 +99,4 @@ def injectIntoHTML():
         outputfile.write(headerHTML)
 
 injectIntoHTML()
-
-
 # %%

@@ -10,11 +10,14 @@
         <div class="bodyHeader">
             <h1>Fuelwatch data from 09-01-2023!!!</h1>
         </div>
+        <button id="imageButton">plot of prices on a map</button>
+        <button id="latitudeButton">plot of prices by latitude</button>
+        <button id="barPlotButton">Price by brand Bar Plot</button>
         <div class="graph">
             <!-- insert graph here -->
-            <img class="plotOfPrices" src="images/09-01-2023-plotNOR_SOR.png" alt="">
-            <img class="plotMap" src="images/09-01-2023-pricesHeatMap.png" alt="">
-            <img class="plotBar" src="images/09-01-2023-brandsBarPlot.png" alt="">
+            <img id="pricesMap" style="display: none;" src="images/09-01-2023-pricesMap.png" alt="">
+            <img id="pricesByLatitude" style="display: none;" src="images/09-01-2023-pricesByLatitude.png" alt="">
+            <img id="brandsBarPlot" style="display: none;" src="images/09-01-2023-brandsBarPlot.png" alt="">
         </div>
         <div class="fuelTable">
             <table border="1" class="dataframe">
@@ -1283,11 +1286,11 @@
     </tr>
     <tr>
       <th>80</th>
-      <td>Ampol Foodary Baldivis</td>
+      <td>Caltex Baldivis</td>
       <td>165.9</td>
-      <td>Ampol</td>
-      <td>-32.330641</td>
-      <td>115.820995</td>
+      <td>Caltex</td>
+      <td>-32.353665</td>
+      <td>115.807650</td>
       <td>SOR</td>
     </tr>
     <tr>
@@ -1319,20 +1322,20 @@
     </tr>
     <tr>
       <th>105</th>
-      <td>Ampol Foodary Thornlie</td>
+      <td>7-Eleven Thornlie</td>
       <td>165.9</td>
-      <td>Ampol</td>
-      <td>-32.061092</td>
-      <td>115.939257</td>
+      <td>7-Eleven</td>
+      <td>-32.069540</td>
+      <td>115.952095</td>
       <td>SOR</td>
     </tr>
     <tr>
       <th>78</th>
-      <td>Caltex Baldivis</td>
+      <td>7-Eleven Baldivis</td>
       <td>165.9</td>
-      <td>Caltex</td>
-      <td>-32.353665</td>
-      <td>115.807650</td>
+      <td>7-Eleven</td>
+      <td>-32.308362</td>
+      <td>115.822017</td>
       <td>SOR</td>
     </tr>
     <tr>
@@ -1373,20 +1376,20 @@
     </tr>
     <tr>
       <th>106</th>
-      <td>7-Eleven Thornlie</td>
+      <td>Ampol Foodary Thornlie</td>
       <td>165.9</td>
-      <td>7-Eleven</td>
-      <td>-32.069540</td>
-      <td>115.952095</td>
+      <td>Ampol</td>
+      <td>-32.061092</td>
+      <td>115.939257</td>
       <td>SOR</td>
     </tr>
     <tr>
       <th>79</th>
-      <td>7-Eleven Baldivis</td>
+      <td>Ampol Foodary Baldivis</td>
       <td>165.9</td>
-      <td>7-Eleven</td>
-      <td>-32.308362</td>
-      <td>115.822017</td>
+      <td>Ampol</td>
+      <td>-32.330641</td>
+      <td>115.820995</td>
       <td>SOR</td>
     </tr>
     <tr>
@@ -2138,20 +2141,20 @@
     </tr>
     <tr>
       <th>126</th>
-      <td>Ampol Foodary Gosnells</td>
-      <td>167.9</td>
-      <td>Ampol</td>
-      <td>-32.079794</td>
-      <td>115.988117</td>
-      <td>SOR</td>
-    </tr>
-    <tr>
-      <th>125</th>
       <td>7-Eleven Gosnells</td>
       <td>167.9</td>
       <td>7-Eleven</td>
       <td>-32.089802</td>
       <td>115.998682</td>
+      <td>SOR</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>Ampol Foodary Gosnells</td>
+      <td>167.9</td>
+      <td>Ampol</td>
+      <td>-32.079794</td>
+      <td>115.988117</td>
       <td>SOR</td>
     </tr>
     <tr>
@@ -2228,15 +2231,6 @@
     </tr>
     <tr>
       <th>139</th>
-      <td>BP Connect Palm Springs</td>
-      <td>167.9</td>
-      <td>BP</td>
-      <td>-32.348315</td>
-      <td>115.761753</td>
-      <td>SOR</td>
-    </tr>
-    <tr>
-      <th>140</th>
       <td>Ampol Foodary Warnbro</td>
       <td>167.9</td>
       <td>Ampol</td>
@@ -2245,21 +2239,30 @@
       <td>SOR</td>
     </tr>
     <tr>
-      <th>141</th>
-      <td>BP 2go Burrendah</td>
+      <th>140</th>
+      <td>BP Connect Palm Springs</td>
       <td>167.9</td>
       <td>BP</td>
-      <td>-32.058316</td>
-      <td>115.882114</td>
+      <td>-32.348315</td>
+      <td>115.761753</td>
       <td>SOR</td>
     </tr>
     <tr>
-      <th>142</th>
+      <th>141</th>
       <td>BP 2go Collins Road</td>
       <td>167.9</td>
       <td>BP</td>
       <td>-32.055655</td>
       <td>115.903652</td>
+      <td>SOR</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>BP 2go Burrendah</td>
+      <td>167.9</td>
+      <td>BP</td>
+      <td>-32.058316</td>
+      <td>115.882114</td>
       <td>SOR</td>
     </tr>
     <tr>
@@ -3301,5 +3304,6 @@
 </table>
         </div>
     </div>
+    <script src="js_scripts/index.js"></script>
 </body>
 </html>

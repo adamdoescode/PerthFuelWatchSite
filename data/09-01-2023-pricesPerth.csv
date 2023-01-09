@@ -138,18 +138,18 @@ Puma Como,165.7,Puma,-31.999152,115.862362,SOR
 Puma Parmelia,165.7,Puma,-32.247336,115.816983,SOR
 Puma Maddington,165.7,Puma,-32.034609,116.000915,SOR
 Puma Welshpool,165.7,Puma,-31.991465,115.946469,SOR
-Ampol Foodary Baldivis,165.9,Ampol,-32.330641,115.820995,SOR
+Caltex Baldivis,165.9,Caltex,-32.353665,115.80765,SOR
 Coles Express South Perth,165.9,Coles Express,-31.974773,115.881635,SOR
 7-Eleven Southern River,165.9,7-Eleven,-32.107884,115.939718,SOR
 Coles Express Southern River,165.9,Coles Express,-32.103521,115.934721,SOR
-Ampol Foodary Thornlie,165.9,Ampol,-32.061092,115.939257,SOR
-Caltex Baldivis,165.9,Caltex,-32.353665,115.80765,SOR
+7-Eleven Thornlie,165.9,7-Eleven,-32.06954,115.952095,SOR
+7-Eleven Baldivis,165.9,7-Eleven,-32.308362,115.822017,SOR
 Coles Express Waikiki,165.9,Coles Express,-32.315121,115.753183,SOR
 EG Ampol Warnbro,165.9,EG Ampol,-32.345819,115.761444,SOR
 Coles Express Willetton,165.9,Coles Express,-32.039109,115.893756,SOR
 Ampol Foodary South Lake,165.9,Ampol,-32.108271,115.829221,SOR
-7-Eleven Thornlie,165.9,7-Eleven,-32.06954,115.952095,SOR
-7-Eleven Baldivis,165.9,7-Eleven,-32.308362,115.822017,SOR
+Ampol Foodary Thornlie,165.9,Ampol,-32.061092,115.939257,SOR
+Ampol Foodary Baldivis,165.9,Ampol,-32.330641,115.820995,SOR
 Coles Express Westfield,165.9,Coles Express,-32.130396,116.000966,SOR
 Coles Express Myaree,165.9,Coles Express,-32.039649,115.815283,SOR
 Coles Express Bentley,165.9,Coles Express,-32.000633,115.918698,SOR
@@ -233,8 +233,8 @@ BP Connect Myaree,167.9,BP,-32.045815,115.82024,SOR
 Coles Express Leeming,167.9,Coles Express,-32.079015,115.858415,SOR
 BP Connect Kwinana Hub,167.9,BP,-32.244379,115.81264,SOR
 BP Kardinya,167.9,BP,-32.068996,115.819959,SOR
-Ampol Foodary Gosnells,167.9,Ampol,-32.079794,115.988117,SOR
 7-Eleven Gosnells,167.9,7-Eleven,-32.089802,115.998682,SOR
+Ampol Foodary Gosnells,167.9,Ampol,-32.079794,115.988117,SOR
 7-Eleven Golden Bay,167.9,7-Eleven,-32.420777,115.761055,SOR
 Ampol Foodary Forrestdale,167.9,Ampol,-32.146558,115.965549,SOR
 Coles Express Victoria Park,167.9,Coles Express,-31.985535,115.896186,SOR
@@ -243,10 +243,10 @@ Ampol Foodary Bentley,167.9,Ampol,-32.012142,115.914131,SOR
 Coles Express Beeliar,167.9,Coles Express,-32.128112,115.798736,SOR
 BP 2go Armadale,167.9,BP,-32.148535,116.020351,SOR
 Ampol Foodary Applecross,167.9,Ampol,-32.01154,115.850201,SOR
-BP Connect Palm Springs,167.9,BP,-32.348315,115.761753,SOR
 Ampol Foodary Warnbro,167.9,Ampol,-32.328853,115.758691,SOR
-BP 2go Burrendah,167.9,BP,-32.058316,115.882114,SOR
+BP Connect Palm Springs,167.9,BP,-32.348315,115.761753,SOR
 BP 2go Collins Road,167.9,BP,-32.055655,115.903652,SOR
+BP 2go Burrendah,167.9,BP,-32.058316,115.882114,SOR
 Ampol Foodary Yangebup,167.9,Ampol,-32.127568,115.799158,SOR
 Ampol Foodary Karrinyup,167.9,Ampol,-31.882078,115.796245,NOR
 BP Connect Riverton,167.9,BP,-32.038908,115.904355,SOR

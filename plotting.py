@@ -22,29 +22,31 @@ class plotCoordinator():
     def __init__(self):
         self.pricesPerth = pd.read_csv(f'data/{TODAYS_DATE}-pricesPerth.csv')
     
-    def checkPlotExists(self, plotName):
+    def checkPlotExists(self, plotName, forceTrue=False):
         '''
         Checks if a plot exists already
         '''
-        if os.path.exists(f'images/{TODAYS_DATE}-{plotName}.png'):
+        if forceTrue:
+            return True
+        elif os.path.exists(f'images/{TODAYS_DATE}-{plotName}.png'):
             print(f'{plotName} already exists')
             return True
         else:
             return False
 
     # create a plot of prices vs lattitude
-    def plotNOR_SOR(self):
+    def pricesByLatitude(self):
         '''
         Plot of longitude vs latitude coloured by price
         '''
-        plotName = 'plotNOR_SOR'
-        #check if plotNOR_SOR exists already for today
+        plotName = 'pricesByLatitude'
+        #check if pricesByLatitude exists already for today
         if not self.checkPlotExists(plotName):
-            plotNOR_SOR = (ggplot(self.pricesPerth, aes(x='latitude', y='price', color='brand'))
+            pricesByLatitude = (ggplot(self.pricesPerth, aes(x='latitude', y='price', color='brand'))
                 + geom_point()
                 + ggtitle("Prices vs latitude coloured by brand")
                 )
-            plotNOR_SOR.save(f'images/{TODAYS_DATE}-plotNOR_SOR.png', height=10, width=15)
+            pricesByLatitude.save(f'images/{TODAYS_DATE}-pricesByLatitude.png', height=10, width=15)
 
     def brandsBarPlot(self):
         plotName = 'brandsBarPlot'
@@ -56,25 +58,25 @@ class plotCoordinator():
             )
             brandsBarPlot.save(f'images/{TODAYS_DATE}-brandsBarPlot.png', height=10, width=15)
 
-    def pricesHeatMap(self):
-        plotName = 'pricesHeatMap'
+    def pricesMap(self):
+        plotName = 'pricesMap'
         if not self.checkPlotExists(plotName):
-            pricesHeatMap = (
+            pricesMap = (
                 ggplot(self.pricesPerth, aes(y="latitude",x="longitude", colour = "price")) +
                 geom_point() + 
                 scale_x_continuous(breaks = [1,100]) +
                 theme_bw() +
                 ggtitle("Prices by location around Perth")
             )
-            pricesHeatMap.save(f'images/{TODAYS_DATE}-pricesHeatMap.png', height=10, width=15)
+            pricesMap.save(f'images/{TODAYS_DATE}-pricesMap.png', height=10, width=15)
     
     def allPlots(self):
         '''
         Fires off all plots
         '''
-        self.plotNOR_SOR()
+        self.pricesByLatitude()
         self.brandsBarPlot()
-        self.pricesHeatMap()
+        self.pricesMap()
         print('All plots generated')
 
 #init function

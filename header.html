@@ -10,15 +10,19 @@
         <div class="bodyHeader">
             <h1>Fuelwatch data from <!-- insert_date -->!!!</h1>
         </div>
+        <button id="imageButton">plot of prices on a map</button>
+        <button id="latitudeButton">plot of prices by latitude</button>
+        <button id="barPlotButton">Price by brand Bar Plot</button>
         <div class="graph">
             <!-- insert graph here -->
-            <img class="plotOfPrices" src="images/<!-- insert_date -->-plotNOR_SOR.png" alt="">
-            <img class="plotMap" src="images/<!-- insert_date -->-pricesHeatMap.png" alt="">
-            <img class="plotBar" src="images/<!-- insert_date -->-brandsBarPlot.png" alt="">
+            <img id="pricesMap" style="display: none;" src="images/<!-- insert_date -->-pricesMap.png" alt="">
+            <img id="pricesByLatitude" style="display: none;" src="images/<!-- insert_date -->-pricesByLatitude.png" alt="">
+            <img id="brandsBarPlot" style="display: none;" src="images/<!-- insert_date -->-brandsBarPlot.png" alt="">
         </div>
         <div class="fuelTable">
             <!-- insert table here -->
         </div>
     </div>
+    <script src="js_scripts/index.js"></script>
 </body>
 </html>
