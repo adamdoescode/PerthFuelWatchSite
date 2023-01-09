@@ -52,36 +52,36 @@ Ampol Foodary Rivervale,163.9,Ampol,-31.953623,115.913619,SOR
 Ampol Foodary Riverton,163.9,Ampol,-32.03846,115.896732,SOR
 Ampol Foodary Murdoch,163.9,Ampol,-32.063419,115.835712,SOR
 Caltex Murdoch,163.9,Caltex,-32.079195,115.842898,SOR
-7-Eleven Maddington South,163.9,7-Eleven,-32.055377,115.9886,SOR
-Ampol Foodary Clarkson,163.9,Ampol,-31.689369,115.715226,NOR
 EG Ampol Maddington West,163.9,EG Ampol,-32.049324,115.977502,SOR
+Ampol Foodary Clarkson,163.9,Ampol,-31.689369,115.715226,NOR
+7-Eleven Maddington South,163.9,7-Eleven,-32.055377,115.9886,SOR
 Ampol Foodary Cannington,163.9,Ampol,-32.017556,115.934873,SOR
 7-Eleven Canning Vale,163.9,7-Eleven,-32.092476,115.923934,SOR
-Ampol Foodary Livingston,163.9,Ampol,-32.087082,115.916536,SOR
 EG Ampol Canning Vale,163.9,EG Ampol,-32.072873,115.925469,SOR
+Ampol Foodary Livingston,163.9,Ampol,-32.087082,115.916536,SOR
+Caltex Byford,163.9,Caltex,-32.207484,115.977648,SOR
 7-Eleven Byford South,163.9,7-Eleven,-32.222078,116.005916,SOR
 Ampol Foodary Byford,163.9,Ampol,-32.226368,116.008,SOR
-Caltex Byford,163.9,Caltex,-32.207484,115.977648,SOR
 Ampol Foodary Ascot,163.9,Ampol,-31.94098,115.926337,SOR
 7-Eleven Ascot,163.9,7-Eleven,-31.941776,115.925077,SOR
 Caltex Forrestdale,163.9,Caltex,-32.14267,115.974144,SOR
 Ampol Foodary Doubleview,163.9,Ampol,-31.901328,115.794203,NOR
 Ampol Foodary Melville,163.9,Ampol,-32.031217,115.815428,SOR
-Ampol Foodary Malaga Drive,163.9,Ampol,-31.863189,115.893921,NOR
+7-Eleven Malaga,163.9,7-Eleven,-31.856778,115.908098,NOR
+Ampol Foodary Morley,163.9,Ampol,-31.876015,115.92532,NOR
 7-Eleven Morley,163.9,7-Eleven,-31.903344,115.903047,NOR
 EG Ampol Morley Galleria,163.9,EG Ampol,-31.896262,115.895092,NOR
-Ampol Foodary Morley,163.9,Ampol,-31.876015,115.92532,NOR
 Ampol Foodary North Wanneroo,163.9,Ampol,-31.625661,115.718259,NOR
 Ampol Foodary East Perth,163.9,Ampol,-31.948689,115.869567,NOR
 Caltex Yanchep,163.9,Caltex,-31.547779,115.641352,NOR
-7-Eleven Malaga,163.9,7-Eleven,-31.856778,115.908098,NOR
+Caltex Malaga,163.9,Caltex,-31.85295,115.882059,NOR
 7-Eleven Landsdale,163.9,7-Eleven,-31.804934,115.835741,NOR
 EG Ampol Mirrabooka,163.9,EG Ampol,-31.873567,115.861407,NOR
 Ampol Foodary Kingsley,163.9,Ampol,-31.807038,115.788723,NOR
 Caltex Joondalup,163.9,Caltex,-31.728704,115.76494,NOR
 EG Ampol Greenwood,163.9,EG Ampol,-31.822072,115.820539,NOR
 Ampol Foodary Joondalup,163.9,Ampol,-31.741328,115.764003,NOR
-Caltex Malaga,163.9,Caltex,-31.85295,115.882059,NOR
+Ampol Foodary Malaga Drive,163.9,Ampol,-31.863189,115.893921,NOR
 Puma Kiara,164.2,Puma,-31.887138,115.93832,NOR
 BP Kelmscott,164.7,BP,-32.118708,116.016589,SOR
 BP Langford,164.7,BP,-32.04723,115.932375,SOR
@@ -109,8 +109,8 @@ United Bibra Lake,165.5,United,-32.093798,115.802588,SOR
 Vibe Subiaco,165.5,Vibe,-31.952307,115.83115,NOR
 NightOwl Shell Maddington,165.5,Shell,-32.045398,115.988733,SOR
 Vibe Bedford,165.5,Vibe,-31.9,115.889257,NOR
-United Bassendean,165.5,United,-31.905283,115.932367,NOR
 Vibe Bassendean,165.5,Vibe,-31.901105,115.959118,NOR
+United Bassendean,165.5,United,-31.905283,115.932367,NOR
 United Armadale,165.5,United,-32.161492,116.0176,SOR
 United Myaree,165.5,United,-32.046212,115.812611,SOR
 United Byford,165.5,United,-32.2154436,116.0080304,SOR
@@ -184,14 +184,14 @@ Coles Express Osborne Park,165.9,Coles Express,-31.907535,115.819092,NOR
 Coles Express Ocean Reef,165.9,Coles Express,-31.76744,115.749421,NOR
 Coles Express Mount Lawley,165.9,Coles Express,-31.923821,115.859281,NOR
 BP Connect Wellington Rd,165.9,BP,-31.894607,115.896666,NOR
-Coles Express Malaga,165.9,Coles Express,-31.863512,115.879279,NOR
-Ampol Foodary Yanchep,165.9,Ampol,-31.552063,115.639632,NOR
 Ampol Foodary Malaga,165.9,Ampol,-31.848235,115.878484,NOR
+Ampol Foodary Yanchep,165.9,Ampol,-31.552063,115.639632,NOR
+Coles Express Malaga,165.9,Coles Express,-31.863512,115.879279,NOR
 7-Eleven Joondalup,165.9,7-Eleven,-31.753934,115.765241,NOR
 EG Ampol Floreat,165.9,EG Ampol,-31.93672,115.793911,NOR
 BP Embleton,165.9,BP,-31.8951,115.923206,NOR
 Ampol Foodary Ashby,165.9,Ampol,-31.73256,115.80416,NOR
-Coles Express Ellenbrook,165.9,Coles Express,-31.775,115.96,NOR
+BP Ellenbrook,165.9,BP,-31.775436,115.963073,NOR
 7-Eleven Malvern Springs,165.9,7-Eleven,-31.766075,115.985544,NOR
 Coles Express Duncraig,165.9,Coles Express,-31.835583,115.782828,NOR
 EG Ampol Dianella,165.9,EG Ampol,-31.89674,115.871865,NOR
@@ -201,11 +201,11 @@ Coles Express Clarkson,165.9,Coles Express,-31.691894,115.716118,NOR
 7-Eleven Banksia Grove,165.9,7-Eleven,-31.703423,115.804315,NOR
 Coles Express Kingsley,165.9,Coles Express,-31.81975,115.805778,NOR
 Caltex Yokine,165.9,Caltex,-31.904611,115.849565,NOR
-BP Ellenbrook,165.9,BP,-31.775436,115.963073,NOR
+Coles Express Ellenbrook,165.9,Coles Express,-31.775,115.96,NOR
+Caltex Balcatta,165.9,Caltex,-31.862537,115.819152,NOR
+7-Eleven Balcatta,165.9,7-Eleven,-31.860353,115.80964,NOR
 7-Eleven Stirling,165.9,7-Eleven,-31.8734,115.828839,NOR
 Ampol Foodary Northlands,165.9,Ampol,-31.872542,115.830984,NOR
-7-Eleven Balcatta,165.9,7-Eleven,-31.860353,115.80964,NOR
-Caltex Balcatta,165.9,Caltex,-31.862537,115.819152,NOR
 United Southern River,166.5,United,-32.121136,115.954582,SOR
 United Mt Lawley,166.5,United,-31.925836,115.88017,NOR
 Vibe Wanneroo,166.5,Vibe,-31.751382,115.803426,NOR
@@ -222,8 +222,8 @@ NightOwl Shell Highgate,167.5,Shell,-31.938231,115.877113,NOR
 Vibe Nollamara,167.5,Vibe,-31.880514,115.840339,NOR
 Vibe Charles St,167.5,Vibe,-31.922312,115.850264,NOR
 Better Choice Tuart Hill,167.5,Better Choice,-31.897268,115.841447,NOR
-7-Eleven Wanneroo South,167.5,7-Eleven,-31.754313,115.804474,NOR
 7-Eleven Wanneroo,167.5,7-Eleven,-31.748986,115.801954,NOR
+7-Eleven Wanneroo South,167.5,7-Eleven,-31.754313,115.804474,NOR
 Vibe West Swan,167.5,Vibe,-31.839036,115.990655,NOR
 7-Eleven Harrisdale,167.5,7-Eleven,-32.125599,115.92601,SOR
 Better Choice Malaga,167.5,Better Choice,-31.855136,115.878229,NOR
@@ -328,8 +328,8 @@ BP Ballajura,169.9,BP,-31.826611,115.877278,NOR
 Coles Express Mosman Park,169.9,Coles Express,-32.005184,115.759304,NOR
 BP Connect Beaumauris,169.9,BP,-31.752351,115.74064,NOR
 BP Connect Padbury,169.9,BP,-31.813708,115.75932,NOR
-Coles Express Perth,169.9,Coles Express,-31.940953,115.863904,NOR
 BP Highgate,169.9,BP,-31.942556,115.867359,NOR
+Coles Express Perth,169.9,Coles Express,-31.940953,115.863904,NOR
 BP Connect Merriwa,169.9,BP,-31.670127,115.726195,NOR
 BP Connect North Perth,169.9,BP,-31.926673,115.851901,NOR
 BP Sorrento,169.9,BP,-31.832414,115.74792,NOR

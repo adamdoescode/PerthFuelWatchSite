@@ -7,6 +7,7 @@ import seaborn as sns
 import os
 from plotnine import ggplot, geom_point, aes, stat_smooth, facet_wrap, scale_x_continuous, theme_bw, ggtitle, geom_col, scale_x_discrete, theme, element_text
 from datetime import datetime
+import plotting
 
 def get_fuel(product_id, region_id):
     query: str = 'http://www.fuelwatch.wa.gov.au/fuelwatch/fuelWatchRSS?'
@@ -77,46 +78,27 @@ else:
     #create it
     pricesPerth = retrieveData()
 #%%
-# create a plot of prices vs lattitude
-#check if plotNOR_SOR exists already for today
-if os.path.exists(f'images/{TODAYS_DATE}-plotNOR_SOR.png'):
-    print('plotNOR_SOR already exists')
-else:
-    plotNOR_SOR = (ggplot(pricesPerth, aes(x='latitude', y='price', color='brand'))
-        + geom_point()
-        + ggtitle("Prices vs latitude coloured by brand")
-        )
-    plotNOR_SOR.save(f'images/{TODAYS_DATE}-plotNOR_SOR.png', height=10, width=15)
-# %%
-brandsBarPlot = (
-    ggplot(pricesPerth, aes(x="brand", y="price")) +
-    geom_col() +
-    theme(axis_text_x=element_text(rotation=90, hjust=1))
-)
-brandsBarPlot.save('images/brandsBarPlot.png', height=10, width=15)
-# %%
-pricesHeatMap = (
-    ggplot(pricesPerth, aes(y="latitude",x="longitude", colour = "price")) +
-    geom_point() + 
-    scale_x_continuous(breaks = [1,100]) +
-    theme_bw() +
-    ggtitle("Prices by location around Perth")
-)
-pricesHeatMap.save('images/pricesHeatMap.png', height=10, width=15)
-
+makePlots = plotting.plotCoordinator()
+makePlots.allPlots()
 #%%
-pricesHTML = pricesPerth.to_html()
+def injectIntoHTML():
+    '''
+    Function to inject data into html
+    '''
+    pricesPerthHTML = pricesPerth.to_html()
 
+    with open('header.html', 'r') as f:
+        headerHTML = f.read()
+    headerHTML = headerHTML.replace('<!-- insert_date -->' ,datetime.today().strftime('%d/%m/%Y'))
 
-with open('header.html', 'r') as f:
-    headerHTML = f.read()
-headerHTML = headerHTML.replace('<!-- insert_date -->' ,datetime.today().strftime('%d/%m/%Y'))
+    headerHTML = headerHTML.replace('<!-- insert table here -->', pricesPerthHTML)
+    #write img link
+    # headerHTML = headerHTML.replace('<!-- insert table here -->', pricesPerthHTML)
+    # write to index.html
+    with open('index.html', 'w') as outputfile:
+        outputfile.write(headerHTML)
 
-headerHTML = headerHTML.replace('<!-- insert table here -->', pricesHTML)
-#write img link
-# headerHTML = headerHTML.replace('<!-- insert table here -->', pricesHTML)
-# write to index.html
-with open('index.html', 'w') as outputfile:
-    outputfile.write(headerHTML)
+injectIntoHTML()
+
 
 # %%
