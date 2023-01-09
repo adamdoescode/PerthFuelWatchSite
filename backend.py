@@ -89,7 +89,7 @@ def injectIntoHTML():
 
     with open('header.html', 'r') as f:
         headerHTML = f.read()
-    headerHTML = headerHTML.replace('<!-- insert_date -->' ,datetime.today().strftime('%d/%m/%Y'))
+    headerHTML = headerHTML.replace('<!-- insert_date -->' ,TODAYS_DATE)
 
     headerHTML = headerHTML.replace('<!-- insert table here -->', pricesPerthHTML)
     #write img link

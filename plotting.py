@@ -21,16 +21,25 @@ class plotCoordinator():
     '''
     def __init__(self):
         self.pricesPerth = pd.read_csv(f'data/{TODAYS_DATE}-pricesPerth.csv')
+    
+    def checkPlotExists(self, plotName):
+        '''
+        Checks if a plot exists already
+        '''
+        if os.path.exists(f'images/{TODAYS_DATE}-{plotName}.png'):
+            print(f'{plotName} already exists')
+            return True
+        else:
+            return False
 
     # create a plot of prices vs lattitude
     def plotNOR_SOR(self):
         '''
         Plot of longitude vs latitude coloured by price
         '''
+        plotName = 'plotNOR_SOR'
         #check if plotNOR_SOR exists already for today
-        if os.path.exists(f'images/{TODAYS_DATE}-plotNOR_SOR.png'):
-            print('plotNOR_SOR already exists')
-        else:
+        if not self.checkPlotExists(plotName):
             plotNOR_SOR = (ggplot(self.pricesPerth, aes(x='latitude', y='price', color='brand'))
                 + geom_point()
                 + ggtitle("Prices vs latitude coloured by brand")
@@ -38,22 +47,26 @@ class plotCoordinator():
             plotNOR_SOR.save(f'images/{TODAYS_DATE}-plotNOR_SOR.png', height=10, width=15)
 
     def brandsBarPlot(self):
-        brandsBarPlot = (
-            ggplot(self.pricesPerth, aes(x="brand", y="price")) +
-            geom_col() +
-            theme(axis_text_x=element_text(rotation=90, hjust=1))
-        )
-        brandsBarPlot.save('images/brandsBarPlot.png', height=10, width=15)
+        plotName = 'brandsBarPlot'
+        if not self.checkPlotExists(plotName):
+            brandsBarPlot = (
+                ggplot(self.pricesPerth, aes(x="brand", y="price")) +
+                geom_col() +
+                theme(axis_text_x=element_text(rotation=90, hjust=1))
+            )
+            brandsBarPlot.save('images/{TODAYS_DATE}-brandsBarPlot.png', height=10, width=15)
 
     def pricesHeatMap(self):
-        pricesHeatMap = (
-            ggplot(self.pricesPerth, aes(y="latitude",x="longitude", colour = "price")) +
-            geom_point() + 
-            scale_x_continuous(breaks = [1,100]) +
-            theme_bw() +
-            ggtitle("Prices by location around Perth")
-        )
-        pricesHeatMap.save('images/pricesHeatMap.png', height=10, width=15)
+        plotName = 'pricesHeatMap'
+        if not self.checkPlotExists(plotName):
+            pricesHeatMap = (
+                ggplot(self.pricesPerth, aes(y="latitude",x="longitude", colour = "price")) +
+                geom_point() + 
+                scale_x_continuous(breaks = [1,100]) +
+                theme_bw() +
+                ggtitle("Prices by location around Perth")
+            )
+            pricesHeatMap.save('images/{TODAYS_DATE}-pricesHeatMap.png', height=10, width=15)
     
     def allPlots(self):
         '''
