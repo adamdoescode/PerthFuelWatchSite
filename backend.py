@@ -44,7 +44,8 @@ def tagLoc(df: pd.DataFrame, locationTag: str):
     '''
     Takes a df and adds a location tag column
     '''
-    pass
+    df.loc[:,'location'] = locationTag
+    return df
 
 def retrieveData():
     '''
@@ -55,13 +56,15 @@ def retrieveData():
     ulpSORToday = get_fuel(1, 26)
     pricesNOR = getFuelReturnDf(ulpNORToday)
     pricesSOR = getFuelReturnDf(ulpSORToday)
-
+    #add location tags
+    pricesNOR = tagLoc(pricesNOR, 'NOR')
+    pricesSOR = tagLoc(pricesSOR, 'SOR')
     #concatenate rowwise as we have the same columns in both SOR and NOR
     pricesPerth = pd.concat([pricesNOR, pricesSOR])
     #modify dataframe using formatData()
     pricesPerth = formatData(pricesPerth)
     #save output to a file for posterity
-    pricesPerth.to_csv(f'data/{TODAYS_DATE}-pricesPerth.csv')
+    pricesPerth.to_csv(f'data/{TODAYS_DATE}-pricesPerth.csv', index=False)
     return pricesPerth
 
 #useful constants
