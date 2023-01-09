@@ -28,9 +28,21 @@ def getFuelReturnDf(dataFromRSS):
         res['longitude'].append(station['longitude'])
     return pd.DataFrame(res)
 
+def formatData(df: pd.DataFrame):
+    '''
+    Takes input data and formats it, should work for any ULP data by default
+    '''
+    df.loc[:,'title'] = df['title'].str.split(': ').str[-1]
+    df = df.sort_values(by='price', ascending=True)
+    df.price = df.price.astype(float)
+    df.latitude = df.latitude.astype(float)
+    df.longitude = df.longitude.astype(float)
+    return df
+
 def retrieveData():
     '''
-    Function to retrieve data, format it, and save output to csv
+    Function to retrieve data, format it, and save output to csv.
+    Currently hardcoded for perth...
     '''
     ulpNORToday = get_fuel(1, 25)
     ulpSORToday = get_fuel(1, 26)
@@ -38,12 +50,8 @@ def retrieveData():
     pricesSOR = getFuelReturnDf(ulpSORToday)
     #concatenate rowwise as we have the same columns in both SOR and NOR
     pricesPerth = pd.concat([pricesNOR, pricesSOR])
-    #modify dataframe
-    pricesPerth.loc[:,'title'] = pricesPerth['title'].str.split(': ').str[-1]
-    pricesPerth = pricesPerth.sort_values(by='price', ascending=True)
-    pricesPerth.price = pricesPerth.price.astype(float)
-    pricesPerth.latitude = pricesPerth.latitude.astype(float)
-    pricesPerth.longitude = pricesPerth.longitude.astype(float)
+    #modify dataframe using formatData()
+    pricesPerth = formatData(pricesPerth)
     #save output to a file for posterity
     pricesPerth.to_csv(f'data/{datetime.today().strftime("%d-%m-%Y")}-pricesPerth.csv')
     return pricesPerth
