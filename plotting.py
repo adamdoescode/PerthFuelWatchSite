@@ -54,7 +54,7 @@ class plotCoordinator():
                 geom_col() +
                 theme(axis_text_x=element_text(rotation=90, hjust=1))
             )
-            brandsBarPlot.save('images/{TODAYS_DATE}-brandsBarPlot.png', height=10, width=15)
+            brandsBarPlot.save(f'images/{TODAYS_DATE}-brandsBarPlot.png', height=10, width=15)
 
     def pricesHeatMap(self):
         plotName = 'pricesHeatMap'
@@ -66,7 +66,7 @@ class plotCoordinator():
                 theme_bw() +
                 ggtitle("Prices by location around Perth")
             )
-            pricesHeatMap.save('images/{TODAYS_DATE}-pricesHeatMap.png', height=10, width=15)
+            pricesHeatMap.save(f'images/{TODAYS_DATE}-pricesHeatMap.png', height=10, width=15)
     
     def allPlots(self):
         '''
