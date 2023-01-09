@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from plotnine import ggplot, geom_point, aes, stat_smooth, facet_wrap, scale_x_continuous, theme_bw, ggtitle
+from plotnine import ggplot, geom_point, aes, stat_smooth, facet_wrap, scale_x_continuous, theme_bw, ggtitle, geom_col, scale_x_discrete, theme, element_text
 from datetime import datetime
 #%%
 def get_fuel(product_id, region_id):
@@ -48,6 +48,8 @@ print('NOR=',np.mean(pricesNOR.price))
 
 pricesPerth = pd.concat([pricesNOR, pricesSOR])
 
+#save output to a file for posterity
+pricesPerth.to_csv(f'data/{datetime.today().strftime("%d-%m-%Y")}-pricesPerth.csv')
 # create a plot of prices vs lattitude
 plotNOR_SOR = (ggplot(pricesPerth, aes(x='latitude', y='price', color='brand'))
     + geom_point()
@@ -55,6 +57,13 @@ plotNOR_SOR = (ggplot(pricesPerth, aes(x='latitude', y='price', color='brand'))
     )
 plotNOR_SOR.save('images/plotNOR_SOR.png', height=10, width=15)
 
+# %%
+brandsBarPlot = (
+    ggplot(pricesPerth, aes(x="brand", y="price")) +
+    geom_col() +
+    theme(axis_text_x=element_text(rotation=90, hjust=1))
+)
+brandsBarPlot.save('images/brandsBarPlot.png', height=10, width=15)
 # %%
 pricesHeatMap = (
     ggplot(pricesPerth, aes(y="latitude",x="longitude", colour = "price")) +
