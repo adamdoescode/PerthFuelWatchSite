@@ -17,9 +17,12 @@ imageButton.addEventListener('click', () => {
     // if the image is already visible, hide it
     pricesMapImg.style.display = 'none';
     return;
-  } else {
-      // show the image
+} else {
+    // show the image
     pricesMapImg.style.display = 'block';
+
+    pricesByLatitude.style.display = 'none';
+    brandsBarPlot.style.display = 'none';
   }
 });
 // add a click event listener to the button
@@ -30,7 +33,10 @@ latitudeButton.addEventListener('click', () => {
     return;
   } else {
       // show the image
-      pricesByLatitude.style.display = 'block';
+    pricesByLatitude.style.display = 'block';
+
+    pricesMapImg.style.display = 'none';
+    brandsBarPlot.style.display = 'none';
   }
 });
 // add a click event listener to the button
@@ -42,5 +48,8 @@ barPlotButton.addEventListener('click', () => {
   } else {
       // show the image
     brandsBarPlot.style.display = 'block';
+
+    pricesMapImg.style.display = 'none';
+    pricesByLatitude.style.display = 'none';
   }
 });
