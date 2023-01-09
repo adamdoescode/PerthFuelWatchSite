@@ -4,9 +4,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 from plotnine import ggplot, geom_point, aes, stat_smooth, facet_wrap, scale_x_continuous, theme_bw, ggtitle, geom_col, scale_x_discrete, theme, element_text
 from datetime import datetime
-#%%
+
 def get_fuel(product_id, region_id):
     query: str = 'http://www.fuelwatch.wa.gov.au/fuelwatch/fuelWatchRSS?'
     query = query + 'Product='+str(product_id)+f'&Region={region_id}'
@@ -39,6 +40,12 @@ def formatData(df: pd.DataFrame):
     df.longitude = df.longitude.astype(float)
     return df
 
+def tagLoc(df: pd.DataFrame, locationTag: str):
+    '''
+    Takes a df and adds a location tag column
+    '''
+    pass
+
 def retrieveData():
     '''
     Function to retrieve data, format it, and save output to csv.
@@ -48,23 +55,35 @@ def retrieveData():
     ulpSORToday = get_fuel(1, 26)
     pricesNOR = getFuelReturnDf(ulpNORToday)
     pricesSOR = getFuelReturnDf(ulpSORToday)
+
     #concatenate rowwise as we have the same columns in both SOR and NOR
     pricesPerth = pd.concat([pricesNOR, pricesSOR])
     #modify dataframe using formatData()
     pricesPerth = formatData(pricesPerth)
     #save output to a file for posterity
-    pricesPerth.to_csv(f'data/{datetime.today().strftime("%d-%m-%Y")}-pricesPerth.csv')
+    pricesPerth.to_csv(f'data/{TODAYS_DATE}-pricesPerth.csv')
     return pricesPerth
 
-pricesPerth = retrieveData()
+#useful constants
+TODAYS_DATE = datetime.today().strftime("%d-%m-%Y")
+
+#check if pricesPerth already exists
+if 'pricesPerth' in globals():
+    print('pricesPerth already exists')
+else:
+    #create it
+    pricesPerth = retrieveData()
 #%%
 # create a plot of prices vs lattitude
-plotNOR_SOR = (ggplot(pricesPerth, aes(x='latitude', y='price', color='brand'))
-    + geom_point()
-    + ggtitle("Prices vs latitude coloured by brand")
-    )
-plotNOR_SOR.save('images/plotNOR_SOR.png', height=10, width=15)
-
+#check if plotNOR_SOR exists already for today
+if os.path.exists(f'images/{TODAYS_DATE}-plotNOR_SOR.png'):
+    print('plotNOR_SOR already exists')
+else:
+    plotNOR_SOR = (ggplot(pricesPerth, aes(x='latitude', y='price', color='brand'))
+        + geom_point()
+        + ggtitle("Prices vs latitude coloured by brand")
+        )
+    plotNOR_SOR.save(f'images/{TODAYS_DATE}-plotNOR_SOR.png', height=10, width=15)
 # %%
 brandsBarPlot = (
     ggplot(pricesPerth, aes(x="brand", y="price")) +
