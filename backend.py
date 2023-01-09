@@ -28,28 +28,28 @@ def getFuelReturnDf(dataFromRSS):
         res['longitude'].append(station['longitude'])
     return pd.DataFrame(res)
 
-ulpNORToday = get_fuel(1, 25)
-ulpSORToday = get_fuel(1, 26)
-pricesNOR = getFuelReturnDf(ulpNORToday)
-pricesSOR = getFuelReturnDf(ulpSORToday)
+def retrieveData():
+    '''
+    Function to retrieve data, format it, and save output to csv
+    '''
+    ulpNORToday = get_fuel(1, 25)
+    ulpSORToday = get_fuel(1, 26)
+    pricesNOR = getFuelReturnDf(ulpNORToday)
+    pricesSOR = getFuelReturnDf(ulpSORToday)
+    #concatenate rowwise as we have the same columns in both SOR and NOR
+    pricesPerth = pd.concat([pricesNOR, pricesSOR])
+    #modify dataframe
+    pricesPerth.loc[:,'title'] = pricesPerth['title'].str.split(': ').str[-1]
+    pricesPerth = pricesPerth.sort_values(by='price', ascending=True)
+    pricesPerth.price = pricesPerth.price.astype(float)
+    pricesPerth.latitude = pricesPerth.latitude.astype(float)
+    pricesPerth.longitude = pricesPerth.longitude.astype(float)
+    #save output to a file for posterity
+    pricesPerth.to_csv(f'data/{datetime.today().strftime("%d-%m-%Y")}-pricesPerth.csv')
+    return pricesPerth
+
+pricesPerth = retrieveData()
 #%%
-pricesNOR.loc[:,'title'] = pricesNOR['title'].str.split(': ').str[-1]
-pricesSOR.loc[:,'title'] = pricesSOR['title'].str.split(': ').str[-1]
-pricesNOR = pricesNOR.sort_values(by='price', ascending=True)
-pricesSOR = pricesSOR.sort_values(by='price', ascending=True)
-pricesNOR.price = pricesNOR.price.astype(float)
-pricesSOR.price = pricesSOR.price.astype(float)
-pricesNOR.latitude = pricesNOR.latitude.astype(float)
-pricesSOR.latitude = pricesSOR.latitude.astype(float)
-pricesNOR.longitude = pricesNOR.longitude.astype(float)
-pricesSOR.longitude = pricesSOR.longitude.astype(float)
-print('SOR=',np.mean(pricesSOR.price))
-print('NOR=',np.mean(pricesNOR.price))
-
-pricesPerth = pd.concat([pricesNOR, pricesSOR])
-
-#save output to a file for posterity
-pricesPerth.to_csv(f'data/{datetime.today().strftime("%d-%m-%Y")}-pricesPerth.csv')
 # create a plot of prices vs lattitude
 plotNOR_SOR = (ggplot(pricesPerth, aes(x='latitude', y='price', color='brand'))
     + geom_point()
