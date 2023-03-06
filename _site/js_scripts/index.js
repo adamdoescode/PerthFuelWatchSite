@@ -5,6 +5,10 @@
 const imageButton = document.getElementById('imageButton');
 const latitudeButton = document.getElementById('latitudeButton');
 const barPlotButton = document.getElementById('barPlotButton');
+const showTable = document.getElementById('hideShowTable');
+
+// get the table element
+const priceTable = document.getElementById('priceTable');
 
 // get the image element
 const pricesMapImg = document.getElementById('pricesMap');
@@ -53,3 +57,14 @@ barPlotButton.addEventListener('click', () => {
     pricesByLatitude.style.display = 'none';
   }
 });
+
+// add a click event listerner to the button
+showTable.addEventListener('click', () => {
+  if (priceTable.style.display != 'none') {
+    // if the table is already visible, hide it
+    priceTable.style.display = 'none';
+  } else {
+    // show the table
+    priceTable.style.display = 'block'; 
+  }
+})

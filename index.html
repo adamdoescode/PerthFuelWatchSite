@@ -14,13 +14,14 @@
         <button id="imageButton">plot of prices on a map</button>
         <button id="latitudeButton">plot of prices by latitude</button>
         <button id="barPlotButton">Price by brand Bar Plot</button>
+        <button id="hideShowTable">Hide Price Table</button>
         <div class="graph">
             <!-- insert graph here -->
             <img id="pricesMap" style="display: none;" src="images/27-02-2023-pricesMap.png" alt="">
             <img id="pricesByLatitude" style="display: none;" src="images/27-02-2023-pricesByLatitude.png" alt="">
             <img id="brandsBarPlot" style="display: none;" src="images/27-02-2023-brandsBarPlot.png" alt="">
         </div>
-        <div class="fuelTable">
+        <div class="fuelTable", id="priceTable">
             <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -114,19 +115,19 @@
       <td>SOR</td>
     </tr>
     <tr>
-      <td>United Tapping</td>
-      <td>164.5</td>
-      <td>United</td>
-      <td>-31.719744</td>
-      <td>115.783408</td>
-      <td>NOR</td>
-    </tr>
-    <tr>
       <td>Liberty Tapping</td>
       <td>164.5</td>
       <td>Liberty</td>
       <td>-31.720162</td>
       <td>115.783898</td>
+      <td>NOR</td>
+    </tr>
+    <tr>
+      <td>United Tapping</td>
+      <td>164.5</td>
+      <td>United</td>
+      <td>-31.719744</td>
+      <td>115.783408</td>
       <td>NOR</td>
     </tr>
     <tr>
@@ -218,11 +219,11 @@
       <td>SOR</td>
     </tr>
     <tr>
-      <td>Ampol Foodary Malaga</td>
+      <td>Ampol Foodary Malaga Drive</td>
       <td>165.9</td>
       <td>Ampol</td>
-      <td>-31.848235</td>
-      <td>115.878484</td>
+      <td>-31.863189</td>
+      <td>115.893921</td>
       <td>NOR</td>
     </tr>
     <tr>
@@ -354,6 +355,14 @@
       <td>NOR</td>
     </tr>
     <tr>
+      <td>Caltex Joondalup</td>
+      <td>165.9</td>
+      <td>Caltex</td>
+      <td>-31.728704</td>
+      <td>115.764940</td>
+      <td>NOR</td>
+    </tr>
+    <tr>
       <td>Ampol Foodary Joondalup</td>
       <td>165.9</td>
       <td>Ampol</td>
@@ -367,14 +376,6 @@
       <td>EG Ampol</td>
       <td>-31.744490</td>
       <td>115.763128</td>
-      <td>NOR</td>
-    </tr>
-    <tr>
-      <td>Caltex Joondalup</td>
-      <td>165.9</td>
-      <td>Caltex</td>
-      <td>-31.728704</td>
-      <td>115.764940</td>
       <td>NOR</td>
     </tr>
     <tr>
@@ -410,11 +411,11 @@
       <td>SOR</td>
     </tr>
     <tr>
-      <td>Ampol Foodary Malaga Drive</td>
+      <td>Ampol Foodary Malaga</td>
       <td>165.9</td>
       <td>Ampol</td>
-      <td>-31.863189</td>
-      <td>115.893921</td>
+      <td>-31.848235</td>
+      <td>115.878484</td>
       <td>NOR</td>
     </tr>
     <tr>
@@ -442,19 +443,19 @@
       <td>SOR</td>
     </tr>
     <tr>
-      <td>Ampol Foodary Thornlie</td>
-      <td>165.9</td>
-      <td>Ampol</td>
-      <td>-32.061092</td>
-      <td>115.939257</td>
-      <td>SOR</td>
-    </tr>
-    <tr>
       <td>Ampol Foodary Thornlie Square</td>
       <td>165.9</td>
       <td>Ampol</td>
       <td>-32.055755</td>
       <td>115.961940</td>
+      <td>SOR</td>
+    </tr>
+    <tr>
+      <td>Ampol Foodary Thornlie</td>
+      <td>165.9</td>
+      <td>Ampol</td>
+      <td>-32.061092</td>
+      <td>115.939257</td>
       <td>SOR</td>
     </tr>
     <tr>
@@ -1098,19 +1099,19 @@
       <td>NOR</td>
     </tr>
     <tr>
-      <td>Coles Express Banksia Grove</td>
-      <td>167.9</td>
-      <td>Coles Express</td>
-      <td>-31.706530</td>
-      <td>115.802679</td>
-      <td>NOR</td>
-    </tr>
-    <tr>
       <td>7-Eleven Banksia Grove</td>
       <td>167.9</td>
       <td>7-Eleven</td>
       <td>-31.703423</td>
       <td>115.804315</td>
+      <td>NOR</td>
+    </tr>
+    <tr>
+      <td>Coles Express Banksia Grove</td>
+      <td>167.9</td>
+      <td>Coles Express</td>
+      <td>-31.706530</td>
+      <td>115.802679</td>
       <td>NOR</td>
     </tr>
     <tr>
@@ -1370,19 +1371,19 @@
       <td>NOR</td>
     </tr>
     <tr>
-      <td>Coles Express Malaga</td>
+      <td>Caltex Malaga</td>
       <td>167.9</td>
-      <td>Coles Express</td>
-      <td>-31.863512</td>
-      <td>115.879279</td>
+      <td>Caltex</td>
+      <td>-31.852950</td>
+      <td>115.882059</td>
       <td>NOR</td>
     </tr>
     <tr>
-      <td>Coles Express Dianella</td>
+      <td>EG Ampol Dianella</td>
       <td>167.9</td>
-      <td>Coles Express</td>
-      <td>-31.905801</td>
-      <td>115.882700</td>
+      <td>EG Ampol</td>
+      <td>-31.896740</td>
+      <td>115.871865</td>
       <td>NOR</td>
     </tr>
     <tr>
@@ -1466,11 +1467,11 @@
       <td>NOR</td>
     </tr>
     <tr>
-      <td>Caltex Malaga</td>
+      <td>Coles Express Malaga</td>
       <td>167.9</td>
-      <td>Caltex</td>
-      <td>-31.852950</td>
-      <td>115.882059</td>
+      <td>Coles Express</td>
+      <td>-31.863512</td>
+      <td>115.879279</td>
       <td>NOR</td>
     </tr>
     <tr>
@@ -1482,11 +1483,11 @@
       <td>NOR</td>
     </tr>
     <tr>
-      <td>EG Ampol Dianella</td>
+      <td>Coles Express Dianella</td>
       <td>167.9</td>
-      <td>EG Ampol</td>
-      <td>-31.896740</td>
-      <td>115.871865</td>
+      <td>Coles Express</td>
+      <td>-31.905801</td>
+      <td>115.882700</td>
       <td>NOR</td>
     </tr>
     <tr>
@@ -1946,11 +1947,11 @@
       <td>SOR</td>
     </tr>
     <tr>
-      <td>Ampol Bibra Lake Diesel Stop</td>
+      <td>BP Bibra Lake</td>
       <td>169.9</td>
-      <td>Ampol</td>
-      <td>-32.109400</td>
-      <td>115.809700</td>
+      <td>BP</td>
+      <td>-32.103888</td>
+      <td>115.804171</td>
       <td>SOR</td>
     </tr>
     <tr>
@@ -1962,19 +1963,19 @@
       <td>SOR</td>
     </tr>
     <tr>
+      <td>Ampol Bibra Lake Diesel Stop</td>
+      <td>169.9</td>
+      <td>Ampol</td>
+      <td>-32.109400</td>
+      <td>115.809700</td>
+      <td>SOR</td>
+    </tr>
+    <tr>
       <td>7-Eleven Bibra Lake</td>
       <td>169.9</td>
       <td>7-Eleven</td>
       <td>-32.101411</td>
       <td>115.801664</td>
-      <td>SOR</td>
-    </tr>
-    <tr>
-      <td>BP Bibra Lake</td>
-      <td>169.9</td>
-      <td>BP</td>
-      <td>-32.103888</td>
-      <td>115.804171</td>
       <td>SOR</td>
     </tr>
     <tr>

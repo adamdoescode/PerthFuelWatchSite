@@ -105,3 +105,27 @@ def injectIntoHTML():
 
 injectIntoHTML()
 # %%
+
+# TODO
+'''
+- get directions to fuel place
+    - get fuel location
+    - use "your location" as reference
+    - use google maps api
+'''
+
+def getFuelReturnDf(dataFromRSS):
+    '''
+    Iterate through output to get pandas df
+    '''
+    res: dict = {
+        colName: [] for colName in ['title', 'price', 'brand', 'latitude', 'longitude']
+    }
+    for station in dataFromRSS:
+        res['title'].append(station['title'])
+        res['price'].append(station['price'])
+        res['brand'].append(station['brand'])
+        res['latitude'].append(station['latitude'])
+        res['longitude'].append(station['longitude'])
+    return pd.DataFrame(res)
+
