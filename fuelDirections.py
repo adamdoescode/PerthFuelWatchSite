@@ -30,3 +30,5 @@ drivingDirections = getDirections(**coords)
 
 # to get total distance covered...
 drivingDirections['routes'][0]['distance']
+
+# %%
