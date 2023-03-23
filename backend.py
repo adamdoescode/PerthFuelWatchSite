@@ -62,6 +62,16 @@ def retrieveDataPerth():
     pricesPerth.to_csv(f'data/{TODAYS_DATE}-pricesPerth.csv', index=False)
     return pricesPerth
 
+def retrieveDataElsewhere(product_id: int = 1, region_id: int = 25):
+    '''
+    Function to retrieve data, format it, and save output to csv.
+    '''
+    ulpToday = get_fuel(product_id, region_id)
+    prices = getFuelReturnDf(ulpToday)
+    prices = formatData(prices)
+    prices.to_csv(f'data/{TODAYS_DATE}-prices.csv', index=False)
+    return prices
+
 def checkIfDataExists(existingFileSuffix: str = '-pricesPerth.csv'):
     '''
     Function to check if data exists
@@ -89,18 +99,14 @@ def retrieveData(greaterPerth = True, *args):
             if len(args) != 2:
                 raise ValueError('You must pass two arguments to retrieveData()')
             product_id, region_id = [argument for argument in args]
-            ulpToday = get_fuel(product_id, region_id)
-            prices = getFuelReturnDf(ulpToday)
-            prices = formatData(prices)
-            prices.to_csv(f'data/{TODAYS_DATE}-prices.csv', index=False)
-            return prices
+            return retrieveDataElsewhere(product_id, region_id)
 
 
 def fueldfToHTML(df: pd.DataFrame):
     '''
     Function to convert fuel df to html
     '''
-    return df.to_html(index=False)
+    return df.to_html(index=False, table_id='fuelTable', classes='table')
 
 
 def injectIntoHTML():

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>Adam's fuelwatch</title>
 </head>
@@ -27,9 +28,11 @@
             <img id="brandsBarPlot" style="display: none;" src="images/<!-- insert_date -->-brandsBarPlot.png" alt="">
         </div>
         <div class="fuelTable", id="priceTable">
-            <!-- insert table here -->
+            {{ fuelDataTable|safe }}
         </div>
     </div>
-    <script src="../js_scripts/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 </html>

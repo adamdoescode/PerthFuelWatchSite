@@ -1,4 +1,8 @@
 
+// add support for datatables
+//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js
+let table = new DataTable('#fuelTable');
+
 // a script to show a hidden image when the user clicks on the button
 
 // get the button element
