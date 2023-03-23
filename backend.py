@@ -4,13 +4,14 @@ import pandas as pd
 from datetime import datetime
 import plotting
 
+# useful constants
+TODAYS_DATE = datetime.today().strftime("%d-%m-%Y")
 
 def get_fuel(product_id, region_id):
     query: str = 'http://www.fuelwatch.wa.gov.au/fuelwatch/fuelWatchRSS?'
     query = query + 'Product='+str(product_id)+f'&Region={region_id}'
     data = feedparser.parse(query)
     return data['entries']
-
 
 def getFuelReturnDf(dataFromRSS):
     '''
@@ -27,7 +28,6 @@ def getFuelReturnDf(dataFromRSS):
         res['longitude'].append(station['longitude'])
     return pd.DataFrame(res)
 
-
 def formatData(df: pd.DataFrame):
     '''
     Takes input data and formats it, should work for any ULP data by default
@@ -39,7 +39,6 @@ def formatData(df: pd.DataFrame):
     df.longitude = df.longitude.astype(float)
     return df
 
-
 def tagLoc(df: pd.DataFrame, locationTag: str):
     '''
     Takes a df and adds a location tag column
@@ -47,12 +46,7 @@ def tagLoc(df: pd.DataFrame, locationTag: str):
     df.loc[:, 'location'] = locationTag
     return df
 
-
-def retrieveData():
-    '''
-    Function to retrieve data, format it, and save output to csv.
-    Currently hardcoded for perth...
-    '''
+def retrieveDataPerth():
     ulpNORToday = get_fuel(1, 25)
     ulpSORToday = get_fuel(1, 26)
     pricesNOR = getFuelReturnDf(ulpNORToday)
@@ -68,9 +62,39 @@ def retrieveData():
     pricesPerth.to_csv(f'data/{TODAYS_DATE}-pricesPerth.csv', index=False)
     return pricesPerth
 
+def checkIfDataExists(existingFileSuffix: str = '-pricesPerth.csv'):
+    '''
+    Function to check if data exists
+    Look for a file called f'data/{TODAYS_DATE}-prices.csv'
+    '''
+    from os import path
+    if path.exists(f'data/{TODAYS_DATE}{existingFileSuffix}'):
+        return True
+    else:
+        return False
 
-# useful constants
-TODAYS_DATE = datetime.today().strftime("%d-%m-%Y")
+def retrieveData(greaterPerth = True, *args):
+    '''
+    Function to retrieve data, format it, and save output to csv.
+    '''
+    if greaterPerth:
+        if checkIfDataExists():
+            return pd.read_csv(f'data/{TODAYS_DATE}-pricesPerth.csv')
+        else:
+            return retrieveDataPerth()
+    else:
+        if checkIfDataExists(existingFileSuffix='-prices.csv'):
+            return pd.read_csv(f'data/{TODAYS_DATE}-prices.csv')
+        else:
+            if len(args) != 2:
+                raise ValueError('You must pass two arguments to retrieveData()')
+            product_id, region_id = [argument for argument in args]
+            ulpToday = get_fuel(product_id, region_id)
+            prices = getFuelReturnDf(ulpToday)
+            prices = formatData(prices)
+            prices.to_csv(f'data/{TODAYS_DATE}-prices.csv', index=False)
+            return prices
+
 
 def fueldfToHTML(df: pd.DataFrame):
     '''
@@ -108,21 +132,6 @@ def injectIntoHTML():
     - use google maps api
 '''
 
-def getFuelReturnDf(dataFromRSS):
-    '''
-    Iterate through output to get pandas df
-    '''
-    res: dict = {
-        colName: [] for colName in ['title', 'price', 'brand', 'latitude', 'longitude']
-    }
-    for station in dataFromRSS:
-        res['title'].append(station['title'])
-        res['price'].append(station['price'])
-        res['brand'].append(station['brand'])
-        res['latitude'].append(station['latitude'])
-        res['longitude'].append(station['longitude'])
-    return pd.DataFrame(res)
-
 # if name
 if __name__ == '__main__':
     # check if pricesPerth already exists
@@ -134,5 +143,5 @@ if __name__ == '__main__':
     # %%
     makePlots = plotting.plotCoordinator()
     makePlots.allPlots()
-    injectIntoHTML()
+    # injectIntoHTML()
 
