@@ -72,16 +72,11 @@ def retrieveData():
 # useful constants
 TODAYS_DATE = datetime.today().strftime("%d-%m-%Y")
 
-# check if pricesPerth already exists
-if 'pricesPerth' in globals():
-    print('pricesPerth already exists')
-else:
-    # create it
-    pricesPerth = retrieveData()
-# %%
-makePlots = plotting.plotCoordinator()
-makePlots.allPlots()
-# %%
+def fueldfToHTML(df: pd.DataFrame):
+    '''
+    Function to convert fuel df to html
+    '''
+    return df.to_html(index=False)
 
 
 def injectIntoHTML():
@@ -103,7 +98,6 @@ def injectIntoHTML():
         outputfile.write(headerHTML)
 
 
-injectIntoHTML()
 # %%
 
 # TODO
@@ -128,4 +122,17 @@ def getFuelReturnDf(dataFromRSS):
         res['latitude'].append(station['latitude'])
         res['longitude'].append(station['longitude'])
     return pd.DataFrame(res)
+
+# if name
+if __name__ == '__main__':
+    # check if pricesPerth already exists
+    if 'pricesPerth' in globals():
+        print('pricesPerth already exists')
+    else:
+        # create it
+        pricesPerth = retrieveData()
+    # %%
+    makePlots = plotting.plotCoordinator()
+    makePlots.allPlots()
+    injectIntoHTML()
 

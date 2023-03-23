@@ -11,7 +11,9 @@
         <div class="bodyHeader">
             <h1>Fuelwatch data from <!-- insert_date -->!!!</h1>
         </div>
-        <button id="getData">Get today's data!</button>
+        <form action="getData" method="get">
+            <button id="getData"><a href="/results/">Get today's data!</a></button>
+        </form>
         <input type="text", id="latitude">
         <input type="text", id="longitude">
         <button id="imageButton">plot of prices on a map</button>
@@ -28,6 +30,6 @@
             <!-- insert table here -->
         </div>
     </div>
-    <script src="js_scripts/index.js"></script>
+    <script src="../js_scripts/index.js"></script>
 </body>
 </html>
